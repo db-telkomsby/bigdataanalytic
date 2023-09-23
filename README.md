@@ -2,8 +2,9 @@
 
 ## Table of Contents
 ### 1. Introduction to Big Data & Data Analytics
-Click [Here](https://github.com/db-telkomsby/bigdataanalytic/tree/main/Data%20Analytics%20Essentials) to read this materials
+Click [Here]() to read this materials
 ### 2. Data Analytics Essentials (Exploration & Preparation)
+Click [Here](https://github.com/db-telkomsby/bigdataanalytic/tree/main/Data%20Analytics%20Essentials) to read this materials
 ### 3. Data Mining Model: Regression Model
 ### 4. Data Mining Model: Classification Model
 ### 5. Data Mining Model: Clustering Model
