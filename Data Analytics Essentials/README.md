@@ -99,17 +99,21 @@ b. Pair relationship
 
 ## Data Preparation
 **1. Cara menghapus baris yang memiliki nilai hilang**
+
 Menghapus baris yang memiliki nilai yang hilang di beberapa kolom atau baris yang benar-benar kosong
 	df.dropna(subset=['Kategori'], inplace=True)
 **2. Cara menghapus baris yang duplikat**
+
 Merapikan dataset dengan menghapus baris duplikat (jika ada)
 	df.drop_duplicates(inplace=True)
 **3. Cara mengganti nilai yang hilang**
+
 Di sini, kita akan mengganti nilai yang hilang di kolom 'Harga' dan 'Jumlah Terjual' dengan 0 atau dengan yang sesuai
 	df['Harga'].fillna(0, inplace=True)
  	df['Jumlah Terjual'].fillna(0, inplace=True)
 
 **4. Cara Menyimpan dataset**
+
 Menyimpan dataset yang telah diolah ke dalam file CSV, Gantilah 'nama_file_cleaned.csv' dengan nama file yang sesuai
 	df.to_csv('nama_file_cleaned.csv', index=False)
 
