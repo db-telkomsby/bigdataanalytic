@@ -51,14 +51,14 @@ Import Data
    #### 1. Cara memasukkan data dari GDrive
    Untuk memasukan data dari Gdrive dapat dilakukan dengan cara mengklik tombol folder > klik tombol folder Gdrive
 
-  kalian akan melihat folder Gdrive kalian  di dalam file explorer. Selanjutnya copy path file yang akan digunakan dan masukan file tersebut dengan cara seperti dibawah ini:
-  (df = pd.read_csv(‘path-file-Gdrive’, sep='separator yang digunakan pada file .csv’))
+  ##### kalian akan melihat folder Gdrive kalian  di dalam file explorer. Selanjutnya copy path file yang akan digunakan dan masukan file tersebut dengan cara seperti dibawah ini:
+	(df = pd.read_csv(‘path-file-Gdrive’, sep='separator yang digunakan pada file .csv’))
   
    #### 2. Cara memasukkan data langsung ke dalam Google Colab
    Untuk memasukan data langsung ke dalam google colab dapat dilakukan dengan cara mengklik tombol folder > klik tombol upload file. 
 
-  Kalian akan melihat file kalian di dalam file explorer. Selanjutnya masukan file tersebut dengan cara seperti dibawah ini:
-  (df = pd.read_csv(‘nama_file’, sep='separator yang digunakan pada file .csv’))
+  ##### Kalian akan melihat file kalian di dalam file explorer. Selanjutnya masukan file tersebut dengan cara seperti dibawah ini:
+	(df = pd.read_csv(‘nama_file’, sep='separator yang digunakan pada file .csv’))
   
    #### 3. Cara membaca data
 ##### a. Melihat data awal
