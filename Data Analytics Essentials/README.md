@@ -60,7 +60,7 @@ Import Data
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/Cara%20memasukkan%20data%20langsung%20ke%20dalam%20Google%20Colab.png?raw=true)
   ##### Kalian akan melihat file kalian di dalam file explorer. Selanjutnya masukan file tersebut dengan cara seperti dibawah ini:
 	(df = pd.read_csv(‘nama_file’, sep='separator yang digunakan pada file .csv’))
-![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/Cara%20memasukkan%20data%20langsung%20ke%20dalam%20Google%20Colab.png?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/data-fileExplorer.png?raw=true)
 
    #### 3. Cara membaca data
 ##### a. Melihat data awal
