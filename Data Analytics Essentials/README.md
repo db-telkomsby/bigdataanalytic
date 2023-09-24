@@ -14,7 +14,18 @@
 4. [Data Preparation](#data-preparation)
 
 ## Dasar Teori :
+Python merupakan salah satu bahasa pemrograman dengan kode yang jelas, lengkap, dan mudah untuk dipahami. Python menjadi bahasa pemrograman yang digunakan dalam pembuatan aplikasi berbasis kecerdasan buatan (artificial intelligence). Python dikembangkan pada 1991 oleh Guido van Rossum (programmer Belanda) di CWI, Amsterdam. Nama python berasal dari nama acara televisi kesayangan Guido yaitu Monty Python's Flying Circus.
 
+Kenapa python? Python terampil dalam menyelesaikan permasalahan big data, data mining, deep learning, data science, hingga machine learning. Secara umum python memiliki bentuk pemrograman berorientasi objek, pemrograman imperatif, dan pemrograman fungsional.
+Python memiliki fitur dan kelebihan sebagai berikut:
+1. Memiliki berbagai kepustakaan/modul
+2. Berorientasi prosedural dan objek sekaligus (multiparadigma)
+3. Memiliki sistem pengelolaan memori otomatis
+4. Bersifat modular sehingga mudah untuk dikembangkan dalam membuat modul baru
+
+Code editor yang dapat digunakan untuk pengembangan Python diantaranya adalah Google Collab (Colaboratory), Visual Studio Code (VS Code), IDLE (Python's Integrated Development and Learning Environment), PyCharm (Development Environment (IDE) yang kuat yang dikembangkan oleh JetBrains), Jupyter Notebook, dll.
+
+Kenapa Google Colaboratory?
 Google Colaboratory (https://colab.research.google.com/) merupakan perangkat komputasi awan (cloud computing) yang dibuat oleh Google dengan tujuan untuk memudahkan kegiatan pembelajaran dan pengolahan data dengan mudah menggunakan antarmuka berbasis Jupyter Notebook atau iPython (interactive Python). Google Colab menyediakan sebuah platform komputasi gratis berupa komputer virtual untuk setiap penggunanya yang dilengkapi dengan kemampuan pengolahan data yang memadai. Dengan memanfaatkan Google Colab, pengguna tidak perlu melakukan instalasi atau pengaturan yang rumit untuk keperluan pengolahan data dengan menggunakan Python.
 
 ## Intro to Python & Colab
@@ -85,16 +96,38 @@ d. Melihat informasi tipe data
   Untuk melihat informasi tipe data, kalian bisa menggunakan fungsi .info() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
 ***Prints information about a DataFrame including the index dtype and column dtypes, non-null values and memory usage***
 	df.info()
-f. Melihat mean data
+ 
+	**4. Pemusatan data (Central Tendency Measurement)**
+a. Melihat mean data
+Untuk melihat mean data, kalian bisa menggunakan fungsi .mean() yang sudah disediakan oleh library pandas. Seperti berikut:
+***melihat mean data***
+	df_num = df[['Harga','Jumlah Terjual']]
+	df_num.mean()
 
-g. Melihat median data
+b. Melihat median data
+Untuk melihat median data, kalian bisa menggunakan fungsi .median() yang sudah disediakan oleh library pandas. Seperti berikut:
+***melihat median data***
+	df_num.median()
+c. Melihat mode data 
+Untuk melihat mode data, kalian bisa menggunakan fungsi .mode() yang sudah disediakan oleh library pandas. Seperti berikut:
+***melihat mode data***
+	df_num.mode()
 
-h. Melihat mode data 
+ 	**5. Statistika deskriptif**
+ Statistik deskriptif merupakan bidang ilmu statistika yang mempelajari cara cara pengumpulan, penyusunan, dan penyajian data suatu penelitian. Statistik deskriptif adalah bagian dari ilmu statistik yang meringkas, menyajikan dan mendeskripsikan data dalam bentuk yang mudah dibaca sehingga memberikan informasi tersebut lebih lengkap. Statistik deskriptif hanya berhubungan dengan hal menguraikan atau memberikan keterangan-keterangan mengenai suatu data atau keadaan atau fenomena, dengan kata lain hanya melihat gambaran secara umum dari data yang didapatkan. 
+ 
+ 	**6. Cara korelasi data**
+  Untuk mengetahui seberapa dekat hubungan antar semua kolom dalam tabel data, kalian bisa pakai fungsi .corr() dari Pandas. Cara menggunakan seperti dibawah ini:
+***Melihat korelasi data menggunakan metode kendal***
+	correlation_matrix = df.corr(method='kendall')
+***Print Correlation Matrix***
+	correlation_matrix
 
    	**4. Cara visualisasi data**
 a. Scatterplot
-
-b. Pair relationship
+Untuk visualisasi data menggunakan Scatterplot, kalian bisa menggunakan seperti dibawah ini
+***visualisasi data menggunakan scatterplot***
+	sns.scatterplot(x='Harga', y='Jumlah Terjual', data= df)
 
 
 ## Data Preparation
