@@ -63,18 +63,18 @@ Import Data
    #### 3. Cara membaca data
 ##### a. Melihat data awal
   Untuk melihat data awal, kalian bisa menggunakan fungsi .head() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
-  Prints 10 first Row 
-  df.head(10)
+###### Prints 10 first Row 
+	df.head(10)
 
 ##### b. Melihat data akhir
   Untuk melihat data akhir, kalian bisa menggunakan fungsi .tail() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
-  # Prints 5 last Row
-  df.tail(5)
+###### Prints 5 last Row
+	df.tail(5)
 
 ##### c. Melihat jumlah kolom dan baris
   Untuk melihat jumlah kolom dan baris kalian bisa menggunakan fungsi .shape yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
-  # Prints the amount of rows and column numbers
-  df.shape
+###### Prints the amount of rows and column numbers
+	df.shape
 
 ##### d. Melihat informasi tipe data
 ##### f. Melihat mean data
