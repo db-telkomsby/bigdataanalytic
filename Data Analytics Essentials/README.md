@@ -1,3 +1,4 @@
+
 # Modul 1
 # Introduction Google Colab, Data Exploration dan Data Preparation
 
@@ -86,9 +87,14 @@ Import Data
 ##### a. Scatterplot
 ##### b. Pair relationship
 
-   
-
-
 
 ## Data Preparation
+### 1. Cara menghapus baris yang memiliki nilai hilang
+#### Menghapus baris yang memiliki nilai yang hilang di beberapa kolom atau baris yang benar-benar kosong
+	df.dropna(subset=['Kategori'], inplace=True)
+### 2. Cara menghapus baris yang duplikat
+#### Merapikan dataset dengan menghapus baris duplikat (jika ada)
+	df.drop_duplicates(inplace=True)
+### 3. Cara mengganti nilai yang hilang
+
 
