@@ -102,10 +102,12 @@ b. Pair relationship
 
 Menghapus baris yang memiliki nilai yang hilang di beberapa kolom atau baris yang benar-benar kosong
 	df.dropna(subset=['Kategori'], inplace=True)
+
 **2. Cara menghapus baris yang duplikat**
 
 Merapikan dataset dengan menghapus baris duplikat (jika ada)
 	df.drop_duplicates(inplace=True)
+
 **3. Cara mengganti nilai yang hilang**
 
 Di sini, kita akan mengganti nilai yang hilang di kolom 'Harga' dan 'Jumlah Terjual' dengan 0 atau dengan yang sesuai
