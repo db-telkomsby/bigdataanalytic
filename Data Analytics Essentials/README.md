@@ -61,28 +61,28 @@ Import Data
   (df = pd.read_csv(‘nama_file’, sep='separator yang digunakan pada file .csv’))
   
    #### 3. Cara membaca data
-* Melihat data awal
+##### a. Melihat data awal
   Untuk melihat data awal, kalian bisa menggunakan fungsi .head() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
-  # Prints 10 first Row ==>
+  Prints 10 first Row 
   df.head(10)
 
-* Melihat data akhir
+##### b. Melihat data akhir
   Untuk melihat data akhir, kalian bisa menggunakan fungsi .tail() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
   # Prints 5 last Row
   df.tail(5)
 
-* Melihat jumlah kolom dan baris
+##### c. Melihat jumlah kolom dan baris
   Untuk melihat jumlah kolom dan baris kalian bisa menggunakan fungsi .shape yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
   # Prints the amount of rows and column numbers
   df.shape
 
-* Melihat informasi tipe data
-* Melihat mean data
-* Melihat median data
-* Melihat mode data 
+##### d. Melihat informasi tipe data
+##### f. Melihat mean data
+##### g. Melihat median data
+##### h. Melihat mode data 
    #### 4. Cara visualisasi data
-* Scatterplot
-* Pair relationship
+##### a. Scatterplot
+##### b. Pair relationship
 
    
 
