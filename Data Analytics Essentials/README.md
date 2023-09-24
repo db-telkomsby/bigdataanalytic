@@ -93,47 +93,77 @@ Kalian akan melihat file kalian di dalam file explorer. Selanjutnya masukan file
 
 
 **3. Cara membaca data**
+
 a. Melihat data awal
 
   Untuk melihat data awal, kalian bisa menggunakan fungsi .head() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
 
 ***Prints 10 first Row***
-	df.head(10)
+	
+```
+ df.head(10)
+```
 
 b. Melihat data akhir
   
   Untuk melihat data akhir, kalian bisa menggunakan fungsi .tail() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
 
 ***Prints 5 last Row***
-	df.tail(5)
+
+```
+ df.tail(5)
+```
 
 c. Melihat jumlah kolom dan baris
   Untuk melihat jumlah kolom dan baris kalian bisa menggunakan fungsi .shape yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
 
 ***Prints the amount of rows and column numbers***
-	df.shape
+
+```
+df.shape
+```
 
 d. Melihat informasi tipe data
   Untuk melihat informasi tipe data, kalian bisa menggunakan fungsi .info() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
+
 ***Prints information about a DataFrame including the index dtype and column dtypes, non-null values and memory usage***
-	df.info()
+
+```
+df.info()
+```
  
 **4. Pemusatan data (Central Tendency Measurement)**
+
 a. Melihat mean data
 
 Untuk melihat mean data, kalian bisa menggunakan fungsi .mean() yang sudah disediakan oleh library pandas. Seperti berikut:
+
 ***melihat mean data***
-	df_num = df[['Harga','Jumlah Terjual']]
-	df_num.mean()
+
+```
+df_num = df[['Harga','Jumlah Terjual']]
+df_num.mean()
+```
 
 b. Melihat median data
+
 Untuk melihat median data, kalian bisa menggunakan fungsi .median() yang sudah disediakan oleh library pandas. Seperti berikut:
+
 ***melihat median data***
-	df_num.median()
+
+``` 
+df_num.median()
+```
+
 c. Melihat mode data 
+
 Untuk melihat mode data, kalian bisa menggunakan fungsi .mode() yang sudah disediakan oleh library pandas. Seperti berikut:
+
 ***melihat mode data***
-	df_num.mode()
+
+``` 
+df_num.mode()
+```
 
 **5. Statistika deskriptif**
 
@@ -142,38 +172,62 @@ Untuk melihat mode data, kalian bisa menggunakan fungsi .mode() yang sudah dised
 **6. Cara korelasi data**
  
   Untuk mengetahui seberapa dekat hubungan antar semua kolom dalam tabel data, kalian bisa pakai fungsi .corr() dari Pandas. Cara menggunakan seperti dibawah ini:
+
 ***Melihat korelasi data menggunakan metode kendal***
-	correlation_matrix = df.corr(method='kendall')
+
+``` 
+correlation_matrix = df.corr(method='kendall')
+```
+
 ***Print Correlation Matrix***
-	correlation_matrix
+
+```
+correlation_matrix
+```
 
 **4. Cara visualisasi data**
-a. Scatterplot
-Untuk visualisasi data menggunakan Scatterplot, kalian bisa menggunakan seperti dibawah ini
-***visualisasi data menggunakan scatterplot***
-	sns.scatterplot(x='Harga', y='Jumlah Terjual', data= df)
 
+a. Scatterplot
+
+Untuk visualisasi data menggunakan Scatterplot, kalian bisa menggunakan seperti dibawah ini
+
+***visualisasi data menggunakan scatterplot***
+
+```
+sns.scatterplot(x='Harga', y='Jumlah Terjual', data= df)
+```
 
 ## Data Preparation
+
 **1. Cara menghapus baris yang memiliki nilai hilang**
 
 Menghapus baris yang memiliki nilai yang hilang di beberapa kolom atau baris yang benar-benar kosong
-	df.dropna(subset=['Kategori'], inplace=True)
+
+```
+df.dropna(subset=['Kategori'], inplace=True)
+```
 
 **2. Cara menghapus baris yang duplikat**
 
 Merapikan dataset dengan menghapus baris duplikat (jika ada)
-	df.drop_duplicates(inplace=True)
+
+```
+df.drop_duplicates(inplace=True)
+```
 
 **3. Cara mengganti nilai yang hilang**
 
 Di sini, kita akan mengganti nilai yang hilang di kolom 'Harga' dan 'Jumlah Terjual' dengan 0 atau dengan yang sesuai
-	df['Harga'].fillna(0, inplace=True)
- 	df['Jumlah Terjual'].fillna(0, inplace=True)
 
+```
+df['Harga'].fillna(0, inplace=True)
+df['Jumlah Terjual'].fillna(0, inplace=True)
+```
 **4. Cara Menyimpan dataset**
 
 Menyimpan dataset yang telah diolah ke dalam file CSV, Gantilah 'nama_file_cleaned.csv' dengan nama file yang sesuai
-	df.to_csv('nama_file_cleaned.csv', index=False)
 
+```
+df.to_csv('nama_file_cleaned.csv', index=False)
+```
 
