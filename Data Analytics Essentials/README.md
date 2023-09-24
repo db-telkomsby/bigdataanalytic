@@ -5,6 +5,7 @@
 2. [Data Exploration](#data-exploration)
 3. [Data Preparation](#data-preparation)
 
+![alt text](link ?raw=true)
 
 ## Intro to Python & Colab
 
