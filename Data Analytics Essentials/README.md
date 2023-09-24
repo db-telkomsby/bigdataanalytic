@@ -80,9 +80,15 @@ Import Data
 	df.shape
 
 ##### d. Melihat informasi tipe data
+  Untuk melihat informasi tipe data, kalian bisa menggunakan fungsi .info() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
+###### Prints information about a DataFrame including the index dtype and column dtypes, non-null values and memory usage
+	df.info()
 ##### f. Melihat mean data
+
 ##### g. Melihat median data
+
 ##### h. Melihat mode data 
+
    #### 4. Cara visualisasi data
 ##### a. Scatterplot
 ##### b. Pair relationship
@@ -96,5 +102,12 @@ Import Data
 #### Merapikan dataset dengan menghapus baris duplikat (jika ada)
 	df.drop_duplicates(inplace=True)
 ### 3. Cara mengganti nilai yang hilang
+#### Di sini, kita akan mengganti nilai yang hilang di kolom 'Harga' dan 'Jumlah Terjual' dengan 0 atau dengan yang sesuai
+	df['Harga'].fillna(0, inplace=True)
+ 	df['Jumlah Terjual'].fillna(0, inplace=True)
+
+### 4. Cara Menyimpan dataset
+#### Menyimpan dataset yang telah diolah ke dalam file CSV, Gantilah 'nama_file_cleaned.csv' dengan nama file yang sesuai
+	df.to_csv('nama_file_cleaned.csv', index=False)
 
 
