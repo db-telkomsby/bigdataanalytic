@@ -71,7 +71,9 @@ Import Data
 
 **import library**
 
-`import pandas as pd`
+```
+import pandas as pd
+```
 
 **1. Cara memasukkan data dari GDrive**
    
@@ -223,6 +225,7 @@ Di sini, kita akan mengganti nilai yang hilang di kolom 'Harga' dan 'Jumlah Terj
 df['Harga'].fillna(0, inplace=True)
 df['Jumlah Terjual'].fillna(0, inplace=True)
 ```
+
 **4. Cara Menyimpan dataset**
 
 Menyimpan dataset yang telah diolah ke dalam file CSV, Gantilah 'nama_file_cleaned.csv' dengan nama file yang sesuai
