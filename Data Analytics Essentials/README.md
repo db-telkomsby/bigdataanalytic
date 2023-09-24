@@ -53,13 +53,15 @@ Import Data
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/Cara%20memasukkan%20data%20dari%20GDrive.png?raw=true)
   ##### kalian akan melihat folder Gdrive kalian  di dalam file explorer. Selanjutnya copy path file yang akan digunakan dan masukan file tersebut dengan cara seperti dibawah ini:
 	(df = pd.read_csv(‘path-file-Gdrive’, sep='separator yang digunakan pada file .csv’))
-  
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/data-GDrive.png?raw=true)
+
    #### 2. Cara memasukkan data langsung ke dalam Google Colab
    Untuk memasukan data langsung ke dalam google colab dapat dilakukan dengan cara mengklik tombol folder > klik tombol upload file. 
-
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/Cara%20memasukkan%20data%20langsung%20ke%20dalam%20Google%20Colab.png?raw=true)
   ##### Kalian akan melihat file kalian di dalam file explorer. Selanjutnya masukan file tersebut dengan cara seperti dibawah ini:
 	(df = pd.read_csv(‘nama_file’, sep='separator yang digunakan pada file .csv’))
-  
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/Cara%20memasukkan%20data%20langsung%20ke%20dalam%20Google%20Colab.png?raw=true)
+
    #### 3. Cara membaca data
 ##### a. Melihat data awal
   Untuk melihat data awal, kalian bisa menggunakan fungsi .head() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
