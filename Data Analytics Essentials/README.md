@@ -50,7 +50,7 @@ Import Data
     import pandas as pd
    #### 1. Cara memasukkan data dari GDrive
    Untuk memasukan data dari Gdrive dapat dilakukan dengan cara mengklik tombol folder > klik tombol folder Gdrive
-
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/Cara memasukkan data dari GDrive.png?raw=true)
   ##### kalian akan melihat folder Gdrive kalian  di dalam file explorer. Selanjutnya copy path file yang akan digunakan dan masukan file tersebut dengan cara seperti dibawah ini:
 	(df = pd.read_csv(‘path-file-Gdrive’, sep='separator yang digunakan pada file .csv’))
   
