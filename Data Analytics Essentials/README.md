@@ -42,6 +42,49 @@ Untuk menambahkan code cell dapat dilakukan dengan cara mengklik tombol Code yan
 
 
 ## Data Exploration
+Contoh data : 
+https://drive.google.com/file/d/18Htoqg91o6Ej95tVK1K0wWCPOClulf4K/view?usp=sharing 
+Import Data
+	Ada banyak cara untuk mengimport data, salah satunya adalah menggunakan pandas, pandas merupakan salah satu library milik python yang biasa digunakan untuk data analytics. Import library pandas tersebut dengan cara sebagai berikut:
+### import library
+    import pandas as pd
+   #### 1. Cara memasukkan data dari GDrive
+   Untuk memasukan data dari Gdrive dapat dilakukan dengan cara mengklik tombol folder > klik tombol folder Gdrive
+
+  kalian akan melihat folder Gdrive kalian  di dalam file explorer. Selanjutnya copy path file yang akan digunakan dan masukan file tersebut dengan cara seperti dibawah ini:
+  (df = pd.read_csv(‘path-file-Gdrive’, sep='separator yang digunakan pada file .csv’))
+  
+   #### 2. Cara memasukkan data langsung ke dalam Google Colab
+   Untuk memasukan data langsung ke dalam google colab dapat dilakukan dengan cara mengklik tombol folder > klik tombol upload file. 
+
+  Kalian akan melihat file kalian di dalam file explorer. Selanjutnya masukan file tersebut dengan cara seperti dibawah ini:
+  (df = pd.read_csv(‘nama_file’, sep='separator yang digunakan pada file .csv’))
+  
+   #### 3. Cara membaca data
+* Melihat data awal
+  Untuk melihat data awal, kalian bisa menggunakan fungsi .head() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
+  # Prints 10 first Row ==>
+  df.head(10)
+
+* Melihat data akhir
+  Untuk melihat data akhir, kalian bisa menggunakan fungsi .tail() yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
+  # Prints 5 last Row
+  df.tail(5)
+
+* Melihat jumlah kolom dan baris
+  Untuk melihat jumlah kolom dan baris kalian bisa menggunakan fungsi .shape yang sudah disediakan oleh library pandas. Cara menggunakan nya seperti dibawah ini:
+  # Prints the amount of rows and column numbers
+  df.shape
+
+* Melihat informasi tipe data
+* Melihat mean data
+* Melihat median data
+* Melihat mode data 
+   #### 4. Cara visualisasi data
+* Scatterplot
+* Pair relationship
+
+   
 
 
 
