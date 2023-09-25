@@ -1,0 +1,31 @@
+Tanggal,Produk,Kategori,Harga,Jumlah Terjual,Toko,Kota
+9/1/2023,Produk A,Elektronik,$500.00,10.00,Toko 1,Jakarta
+9/2/2023,Produk B,Pakaian,,20.00,Toko 2,Surabaya
+9/3/2023,,Alat Masak,$75.00,,Toko 3,Bandung
+,Produk D,,$20.00,30.00,,
+9/5/2023,Produk E,Elektronik,,5.00,Toko 4,Medan
+9/6/2023,Produk F,,$40.00,25.00,Toko 2,Surabaya
+9/7/2023,Produk A,Elektronik,,,Toko 5,
+9/8/2023,Produk B,Pakaian,$35.00,,,Bandung
+9/9/2023,,Alat Masak,$75.00,12.00,Toko 1,
+9/10/2023,Produk D,,,,Toko 4,Medan
+9/11/2023,Produk E,Elektronik,$900.00,,Toko 2,Surabaya
+9/12/2023,,,$40.00,23.00,Toko 5,Semarang
+9/13/2023,Produk A,Elektronik,,,Toko 3,
+9/14/2023,Produk B,Pakaian,$35.00,22.00,,Jakarta
+,Produk C,,,14.00,Toko 4,Medan
+9/16/2023,Produk D,Mainan,$20.00,31.00,,Surabaya
+,Produk E,Elektronik,$900.00,6.00,Toko 5,
+9/18/2023,,Pakaian,$40.00,,Toko 3,Bandung
+9/19/2023,Produk A,Elektronik,$500.00,7.00,Toko 1,
+9/20/2023,,Pakaian,$35.00,19.00,,
+9/21/2023,Produk C,Alat Masak,,13.00,Toko 2,Surabaya
+9/22/2023,Produk D,Mainan,$20.00,,Toko 5,Semarang
+,Produk E,Elektronik,$900.00,3.00,,
+9/24/2023,Produk F,Pakaian,$40.00,24.00,Toko 1,Jakarta
+9/25/2023,Produk A,Elektronik,$500.00,11.00,Toko 4,Medan
+9/26/2023,Produk B,Pakaian,,21.00,Toko 2,Surabaya
+9/27/2023,Produk C,,$75.00,16.00,,Semarang
+9/28/2023,Produk D,Mainan,,32.00,Toko 3,Bandung
+9/29/2023,,,$20.00,2.00,Toko 1,
+9/30/2023,Produk F,Pakaian,$40.00,26.00,Toko 4,Medan
