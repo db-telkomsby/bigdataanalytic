@@ -196,6 +196,8 @@ Untuk visualisasi data menggunakan Scatterplot, kalian bisa menggunakan seperti 
 ***visualisasi data menggunakan scatterplot***
 
 ```
+import seaborn as sns
+
 sns.scatterplot(x='Harga', y='Jumlah Terjual', data= df)
 ```
 
@@ -224,6 +226,7 @@ Di sini, kita akan mengganti nilai yang hilang di kolom 'Harga' dan 'Jumlah Terj
 ```
 df['Harga'].fillna(0, inplace=True)
 df['Jumlah Terjual'].fillna(0, inplace=True)
+df
 ```
 
 **4. Cara Menyimpan dataset**
