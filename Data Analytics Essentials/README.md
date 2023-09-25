@@ -65,7 +65,7 @@ Untuk menambahkan code cell dapat dilakukan dengan cara mengklik tombol Code yan
 Contoh data : 
 https://drive.google.com/file/d/18Htoqg91o6Ej95tVK1K0wWCPOClulf4K/view?usp=sharing 
 
-Import Data
+**1. Import Data**
 
  Ada banyak cara untuk mengimport data, salah satunya adalah menggunakan pandas, pandas merupakan salah satu library milik python yang biasa digunakan untuk data analytics. Import library pandas tersebut dengan cara sebagai berikut:
 
@@ -75,7 +75,7 @@ Import Data
 import pandas as pd
 ```
 
-**1. Cara memasukkan data dari GDrive**
+**2. Cara memasukkan data dari GDrive**
    
    Untuk memasukan data dari Gdrive dapat dilakukan dengan cara mengklik tombol folder > klik tombol folder Gdrive
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/Cara%20memasukkan%20data%20dari%20GDrive.png?raw=true)
@@ -84,7 +84,7 @@ kalian akan melihat folder Gdrive kalian  di dalam file explorer. Selanjutnya co
 	(df = pd.read_csv(‘path-file-Gdrive’, sep='separator yang digunakan pada file .csv’))
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/data-GDrive.png?raw=true)
 
-**2. Cara memasukkan data langsung ke dalam Google Colab**
+**3. Cara memasukkan data langsung ke dalam Google Colab**
    
    Untuk memasukan data langsung ke dalam google colab dapat dilakukan dengan cara mengklik tombol folder > klik tombol upload file. 
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/Cara%20memasukkan%20data%20langsung%20ke%20dalam%20Google%20Colab.png?raw=true)
@@ -94,7 +94,7 @@ Kalian akan melihat file kalian di dalam file explorer. Selanjutnya masukan file
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Analytics%20Essentials/images/data-fileExplorer.png?raw=true)
 
 
-**3. Cara membaca data**
+**4. Cara membaca data**
 
 a. Melihat data awal
 
@@ -134,7 +134,7 @@ d. Melihat informasi tipe data
 df.info()
 ```
  
-**4. Pemusatan data (Central Tendency Measurement)**
+**5. Pemusatan data (Central Tendency Measurement)**
 
 a. Melihat mean data
 
@@ -167,11 +167,11 @@ Untuk melihat mode data, kalian bisa menggunakan fungsi .mode() yang sudah dised
 df_num.mode()
 ```
 
-**5. Statistika deskriptif**
+**6. Statistika deskriptif**
 
  Statistik deskriptif merupakan bidang ilmu statistika yang mempelajari cara cara pengumpulan, penyusunan, dan penyajian data suatu penelitian. Statistik deskriptif adalah bagian dari ilmu statistik yang meringkas, menyajikan dan mendeskripsikan data dalam bentuk yang mudah dibaca sehingga memberikan informasi tersebut lebih lengkap. Statistik deskriptif hanya berhubungan dengan hal menguraikan atau memberikan keterangan-keterangan mengenai suatu data atau keadaan atau fenomena, dengan kata lain hanya melihat gambaran secara umum dari data yang didapatkan. 
  
-**6. Cara korelasi data**
+**7. Cara korelasi data**
  
   Untuk mengetahui seberapa dekat hubungan antar semua kolom dalam tabel data, kalian bisa pakai fungsi .corr() dari Pandas. Cara menggunakan seperti dibawah ini:
 
@@ -187,7 +187,7 @@ correlation_matrix = df.corr(method='kendall')
 correlation_matrix
 ```
 
-**4. Cara visualisasi data**
+**8. Cara visualisasi data**
 
 a. Scatterplot
 
