@@ -46,41 +46,57 @@ Data disajikan dalam bentuk tabel dimana X merupakan lama penayangan iklan dalam
 -----------------------------------------------------------------
 
 Hitunglah berapa banyak penjualan dengan iklan selama 25 hari?
-1. Hitung rata-rata dari variabel X atau   dan variabel Y atau 
+1. Hitung rata-rata dari variabel X atau ![alt text](?raw=true) dan variabel Y atau ![alt text](?raw=true)
 
+![alt text](?raw=true)
 
-2. Hitung
+2. Hitung ![alt text](?raw=true)
+
+![alt text](?raw=true)
+
+![alt text](?raw=true)
+
+![alt text](?raw=true)
 
 3. Hitung b dan a
 
-4. Bentuk Model Regresi Linier Sederhana
-  
+![alt text](?raw=true)            ![alt text](?raw=true)
+
+5. Bentuk Model Regresi Linier Sederhana
+
+![alt text](?raw=true)
 
 5. Hitung Jumlah Produk Internet of Think yang Terjual bila penayangan iklan selama 25 hari
+
+![alt text](?raw=true)
 
 Jumlah prediksi Produk Internet Of Think yang terjual adalah sebanyak 49 buah.
 
 
 6. Hitung Koefisien Korelasi (r) antara Waktu tayang iklan dengan Jumlah Produk yang Terjual.
 
+![alt text](?raw=true)
 
 Kriteria Koefisien Korelasi
-Nilai r
-Korelasi
-0,0 – 0,29
-Sangat Lemah
-0,3 – 0,49
-Lemah
-0,5 – 0,69
-Cukup
-0,7 – 0,79
-Kuat
-0,8 – 1,00
-Sangat Kuat
 
+---------------------------------------------
+      Nilai r              Korelasi
+   -------------       ----------------
+    0,0 – 0,29           Sangat Lemah
+    0,3 – 0,49               Lemah
+    0,5 – 0,69               Cukup
+    0,7 – 0,79               Kuat
+    0,8 – 1,00            Sangat Kuat
+---------------------------------------------
 
 r = 0,76 
+
 Nilainya r positif artinya terdapat korelasi searah antara waktu penayangan iklan dengan jumlah penjualan produk IoT yang terjual. Hubungan searah berarti jika terdapat kenaikan lama penayangan iklan maka akan menaikan jumlah penjualan produk IoT.
-Hitung Koefisian Determinasi (r2) 
+
+7. Hitung Koefisian Determinasi (r2) 
+
+![alt text](?raw=true)
 
 Nilainya r2 = 0,5776 atau 57,76% menjelaskan besarnya pengaruh atau kontribusi dari waktu penayangan iklan terhadap nilai jumlah penjualan produk IoT. Sedangkan 42,24% nya dipengaruhi oleh variable lainnya.
+
+
