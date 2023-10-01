@@ -79,15 +79,15 @@ Jumlah prediksi Produk Internet Of Think yang terjual adalah sebanyak 49 buah.
 
 Kriteria Koefisien Korelasi
 
----------------------------------------
-      Nilai r              Korelasi
-   -------------       ----------------
-    0,0 – 0,29           Sangat Lemah
-    0,3 – 0,49               Lemah
-    0,5 – 0,69               Cukup
-    0,7 – 0,79               Kuat
-    0,8 – 1,00            Sangat Kuat
----------------------------------------
+----------------------------------
+      Nilai r          Korelasi
+   -------------    --------------
+    0,0 – 0,29       Sangat Lemah
+    0,3 – 0,49          Lemah
+    0,5 – 0,69          Cukup
+    0,7 – 0,79           Kuat
+    0,8 – 1,00        Sangat Kuat
+----------------------------------
 
 r = 0,76 
 
