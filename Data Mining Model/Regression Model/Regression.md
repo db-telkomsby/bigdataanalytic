@@ -55,7 +55,7 @@ Data disajikan dalam bentuk tabel dimana X merupakan lama penayangan iklan dalam
 -----------------------------------------------------------------
 
 Hitunglah berapa banyak penjualan dengan iklan selama 25 hari?
-1. Hitung rata-rata dari variabel X atau ![alt text](?raw=true) dan variabel Y atau ![alt text](?raw=true)
+1. Hitung rata-rata dari variabel X atau ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image11.png?raw=true) dan variabel Y atau ![alt text](?raw=true)
 
 ![alt text](?raw=true)
 
