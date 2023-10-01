@@ -57,7 +57,7 @@ Hitunglah berapa banyak penjualan dengan iklan selama 25 hari?
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image12.png?raw=true)
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image4.png?raw=true)
 
-2. Hitung ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image10.png?raw=true)
+2. Hitung S<sub>xx</sub> , S<sub>yy</sub> , S<sub>xy</sub>
 
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image8.png?raw=true)
 
