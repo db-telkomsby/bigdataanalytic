@@ -151,6 +151,8 @@ df.info()
 df.describe()
 ```
 
+## Data Preparation
+
 ```
 obj=df.select_dtypes(include=['object'])
 num=df.select_dtypes(exclude=['object'])
@@ -180,6 +182,8 @@ num.duplicated().value_counts()
 num.duplicated().sum()
 ```
 
+## OLS Regression Results
+
 ```
 statMDL=smf.ols('Gaji~Divisi+Usia+LamaKerja',data=num).fit()
 print(statMDL.summary())
@@ -189,6 +193,8 @@ print(statMDL.summary())
 x=df[['Usia','LamaKerja']]
 y=df['Gaji']
 ```
+
+## Linear Regression Model
 
 ```
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.50,random_state=42)
@@ -200,6 +206,7 @@ l.fit(x_train,y_train)
 predictions=l.predict(x_test)
 ```
 
+## Prediction results
 ```
 print('Coefficients: ',l.coef_)
 print('Intercept: ',l.intercept_)
@@ -217,10 +224,12 @@ print('Test set accuracy: ', r2_score(y_test,predictions), '%')
 ```
 
 ```
-df2=pd.DataFrame({'Actual':y_test,'Predicted':predictions})
+df2 = pd.DataFrame({'Actual':y_test,'Predicted':predictions})
 df2['Eror']=df2['Actual']-df2['Predicted']
 df2
 ```
+
+## Scatter plots
 
 ```
 sns.regplot(x=y_test, y=predictions)
@@ -234,6 +243,8 @@ plt.grid(which='major',linestyle='-',linewidth='0.5',color='green')
 plt.grid(which='major',linestyle=':',linewidth='0.5',color='red')
 plt.show
 ```
+
+## New Prediction
 
 ```
 new_observation=[[30,5]]
