@@ -32,7 +32,7 @@ Terdapat berbagai jenis teknik regresi, masing-masing cocok untuk skenario yang 
 
 ## Rumus Linear Regression
 
-![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image16.png?raw=true)
 
 ## Contoh Soal dan Pengerjaan
 
@@ -59,32 +59,33 @@ Hitunglah berapa banyak penjualan dengan iklan selama 25 hari?
 
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image12.png?raw=true)
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image4.png?raw=true)
-2. Hitung ![alt text](?raw=true)
+2. Hitung ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image10.png?raw=true)
 
-![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image8.png?raw=true)
 
-![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image6.png?raw=true)
 
-![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image1.png?raw=true)
 
 3. Hitung b dan a
 
-![alt text](?raw=true)            ![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image7.png?raw=true)            
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image2.png?raw=true)
 
-5. Bentuk Model Regresi Linier Sederhana
+4. Bentuk Model Regresi Linier Sederhana
 
-![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image9.png?raw=true)
 
 5. Hitung Jumlah Produk Internet of Think yang Terjual bila penayangan iklan selama 25 hari
 
-![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image17.png?raw=true)
 
 Jumlah prediksi Produk Internet Of Think yang terjual adalah sebanyak 49 buah.
 
 
 6. Hitung Koefisien Korelasi (r) antara Waktu tayang iklan dengan Jumlah Produk yang Terjual.
 
-![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image14.png?raw=true)
 
 Kriteria Koefisien Korelasi
 
@@ -104,7 +105,7 @@ Nilainya r positif artinya terdapat korelasi searah antara waktu penayangan ikla
 
 7. Hitung Koefisian Determinasi (r2) 
 
-![alt text](?raw=true)
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Regression%20Model/images/image13.png?raw=true)
 
 Nilainya r2 = 0,5776 atau 57,76% menjelaskan besarnya pengaruh atau kontribusi dari waktu penayangan iklan terhadap nilai jumlah penjualan produk IoT. Sedangkan 42,24% nya dipengaruhi oleh variable lainnya.
 
