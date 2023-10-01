@@ -8,8 +8,8 @@
 
 ## Table of Contents
 1. [Dasar Teori](#dasar-teori)
-2. [Intro to Python & Colab](#intro-to-python--colab)
-3. [Data Exploration](#data-exploration)
+2. [Rumus Linear Regression](#rumus-linear-regression)
+3. [Contoh Soal dan Pengerjaan](#contoh-soal-dan-pengerjaan)
 4. [Data Preparation](#data-preparation)
 
 ## Dasar Teori :
@@ -23,9 +23,9 @@ Terdapat berbagai jenis teknik regresi, masing-masing cocok untuk skenario yang 
 4. Regresi Logistik: Digunakan ketika variabel dependen adalah kategorikal atau biner, regresi logistik memprediksi probabilitas hasil tertentu daripada nilai kontinu.
 5. Regresi Polinomial: Teknik ini memperluas regresi linier dengan menambahkan istilah polinomial ke dalam persamaan. Teknik ini dapat menangkap hubungan non-linear antar variabel.
 
-- Rumus Linear Regression
+## Rumus Linear Regression
 
-- Contoh soal dan pengerjaan
+## Contoh soal dan pengerjaan
 
 Data disajikan dalam bentuk tabel dimana X merupakan lama penayangan iklan dalam satuan minggu sedangkan Y adalah penjualan produk Internet Of Think tersebut sebagaimana terlihat dibawah ini:
 
@@ -79,15 +79,15 @@ Jumlah prediksi Produk Internet Of Think yang terjual adalah sebanyak 49 buah.
 
 Kriteria Koefisien Korelasi
 
-----------------------------------
+-----------------------------------
       Nilai r          Korelasi
-   -------------    --------------
+     ---------        ----------
     0,0 – 0,29       Sangat Lemah
     0,3 – 0,49          Lemah
     0,5 – 0,69          Cukup
     0,7 – 0,79           Kuat
     0,8 – 1,00        Sangat Kuat
-----------------------------------
+-----------------------------------
 
 r = 0,76 
 
@@ -100,3 +100,142 @@ Nilainya r positif artinya terdapat korelasi searah antara waktu penayangan ikla
 Nilainya r2 = 0,5776 atau 57,76% menjelaskan besarnya pengaruh atau kontribusi dari waktu penayangan iklan terhadap nilai jumlah penjualan produk IoT. Sedangkan 42,24% nya dipengaruhi oleh variable lainnya.
 
 
+## Import Libraries
+
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn import metrics
+from sklearn.metrics import classification_report
+from sklearn.metrics import r2_score
+import statsmodels.formula.api as smf
+
+import warnings
+warnings.filterwarnings('ignore')
+```
+
+
+## Load Dataset
+
+```
+df = pd.read_csv('Modul2Tambahan.csv')
+df
+```
+
+```
+df.head(5)
+```
+
+```
+df.tail(5)
+```
+
+```
+df.sample(10)
+```
+
+```
+df.columns
+```
+
+```
+df.info()
+```
+
+```
+df.describe()
+```
+
+```
+obj=df.select_dtypes(include=['object'])
+num=df.select_dtypes(exclude=['object'])
+```
+
+```
+obj
+```
+
+```
+num
+```
+
+```
+num.isna().sum()
+```
+
+```
+num.isna().any().sum()
+```
+
+```
+num.duplicated().value_counts()
+```
+
+```
+num.duplicated().sum()
+```
+
+```
+statMDL=smf.ols('Gaji~Divisi+Usia+LamaKerja',data=num).fit()
+print(statMDL.summary())
+```
+
+```
+x=df[['Usia','LamaKerja']]
+y=df['Gaji']
+```
+
+```
+x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.50,random_state=42)
+l = LinearRegression()
+l.fit(x_train,y_train)
+```
+
+```
+predictions=l.predict(x_test)
+```
+
+```
+print('Coefficients: ',l.coef_)
+print('Intercept: ',l.intercept_)
+print('MAS: ',metrics.mean_absolute_error(y_test,predictions))
+print('MSE: ',metrics.mean_squared_error(y_test,predictions))
+print('RMSE: ',np.sqrt(metrics.mean_squared_error(y_test,predictions)))
+accuracy=l.score(x_test,y_test)
+print('AccuracyII: ', accuracy*100, '%')
+print('R2: ', r2_score(y_test, predictions))
+```
+
+```
+print('Train set accuracy: ', r2_score(y_train,l.predict(x_train)), '%')
+print('Test set accuracy: ', r2_score(y_test,predictions), '%')
+```
+
+```
+df2=pd.DataFrame({'Actual':y_test,'Predicted':predictions})
+df2['Eror']=df2['Actual']-df2['Predicted']
+df2
+```
+
+```
+sns.regplot(x=y_test, y=predictions)
+```
+
+```
+df2=pd.DataFrame({'Actual':y_test, 'Predicted':predictions})
+
+df2.plot(kind='bar', figsize=(60,10))
+plt.grid(which='major',linestyle='-',linewidth='0.5',color='green')
+plt.grid(which='major',linestyle=':',linewidth='0.5',color='red')
+plt.show
+```
+
+```
+new_observation=[[30,5]]
+l.predict(new_observation)
+```
