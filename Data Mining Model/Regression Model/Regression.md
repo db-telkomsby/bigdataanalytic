@@ -10,7 +10,14 @@
 1. [Dasar Teori](#dasar-teori)
 2. [Rumus Linear Regression](#rumus-linear-regression)
 3. [Contoh Soal dan Pengerjaan](#contoh-soal-dan-pengerjaan)
-4. [Data Preparation](#data-preparation)
+4. [Import Libraries](#import-libraries)
+5. [Load Dataset](#load-dataset)
+6. [Data Preparation](#data-preparation)
+7. [OLS Regression Results](#ols-regression-results)
+8. [Linear Regression Model](#linear-regression-model)
+9. [Prediction results](#prediction-results)
+10. [Scatter Plots](#scatter-plots)
+11. [New Prediction](#new-prediction)
 
 ## Dasar Teori :
 
@@ -25,7 +32,9 @@ Terdapat berbagai jenis teknik regresi, masing-masing cocok untuk skenario yang 
 
 ## Rumus Linear Regression
 
-## Contoh soal dan pengerjaan
+![alt text](?raw=true)
+
+## Contoh Soal dan Pengerjaan
 
 Data disajikan dalam bentuk tabel dimana X merupakan lama penayangan iklan dalam satuan minggu sedangkan Y adalah penjualan produk Internet Of Think tersebut sebagaimana terlihat dibawah ini:
 
@@ -229,7 +238,7 @@ df2['Eror']=df2['Actual']-df2['Predicted']
 df2
 ```
 
-## Scatter plots
+## Scatter Plots
 
 ```
 sns.regplot(x=y_test, y=predictions)
