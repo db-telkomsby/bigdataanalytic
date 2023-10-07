@@ -18,10 +18,11 @@ Set data pelatihan, merupakan sekumpulan data lengkap yang berisi kelas dan pred
 Set data uji, berisi data-data baru yang akan dikelompokan oleh model guna mengetahui akurasi dari model yang telah dibuat.
 
 Algoritma klasifikasi yang sudah umum  digunakan antara lain :
-    + Decision tree.
-    + Naives Bayes
-    + Support Vector Machine
-    + k-Nearest Neighbor
+
+    * Decision tree.
+    * Naives Bayes
+    * Support Vector Machine
+    * k-Nearest Neighbor
 
 Decision Tree merupakan salah satu cara data processing dalam memprediksi masa depan dengan cara membangun klasifikasi atau regresi model dalam bentuk struktur pohon. Hal tersebut dilakukan dengan cara memecah terus ke dalam himpunan bagian yang lebih kecil lalu pada saat itu juga sebuah pohon keputusan secara bertahap dikembangkan. Hasil akhir dari proses tersebut adalah pohon dengan node keputusan dan node daun. Sebuah node keputusan (misalnya, Cuaca/ Outlook) memiliki dua atau lebih cabang (misalnya, Panas, Berawan dan Hujan).
 
@@ -83,3 +84,56 @@ df_churn
 df_churn.head()
 ```
 
+```
+# Prints the Dataset Information
+df_churn.info()
+```
+
+```
+# Prints Descriptive Statistics
+df_churn.describe().transpose()
+```
+
+## Data Preprocessing
+
+    * Handling Missing Values
+```
+# Check for Missing Values
+df_churn.isnull().sum()
+```
+
+```
+# Search for Median Value
+median = df_churn['TotalCharges'].median()
+
+# Use Median to Replace Missing Values
+df_churn['TotalCharges'].fillna(median, inplace=True)
+
+# Check for Missing Values
+df_churn.isnull().sum()
+```
+
+    * Encode Categorical Data
+```
+
+```
+
+
+```
+
+```
+
+
+```
+
+```
+
+
+```
+
+```
+
+
+```
+
+```
