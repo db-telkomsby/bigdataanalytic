@@ -40,6 +40,7 @@ Kelebihan lain dari metode ini adalah mampu mengeliminasi perhitungan atau data-
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar%201.png?raw=true)
 
 Root node (akar): tujuan akhir atau keputusan besar yang ingin diambil.
+
 Branches (ranting): berbagai pilihan tindakan.
 
 Leaf node (daun): kemungkinan hasil atas setiap tindakan.
