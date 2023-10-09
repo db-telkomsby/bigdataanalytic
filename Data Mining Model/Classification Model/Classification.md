@@ -96,7 +96,8 @@ df_churn.describe().transpose()
 
 ## Data Preprocessing
 
-    * Handling Missing Values
+*Handling Missing Values*
+
 ```
 # Check for Missing Values
 df_churn.isnull().sum()
@@ -113,27 +114,145 @@ df_churn['TotalCharges'].fillna(median, inplace=True)
 df_churn.isnull().sum()
 ```
 
-    * Encode Categorical Data
+*Encode Categorical Data*
+
+```
+# Import Module
+from sklearn.preprocessing import OneHotEncoder
+
+# Encoder
+encoder = OneHotEncoder(sparse=False)
+
+# Encode Categorical Data
+df_encoded = pd.DataFrame(encoder.fit_transform(df_churn[['gender', 'InternetService', 'Contract', 'PaymentMethod']]))
+df_encoded.columns = encoder.get_feature_names_out(['gender', 'InternetService', 'Contract', 'PaymentMethod'])
+
+# Replace Categotical Data with Encoded Data
+df_churn.drop(['gender', 'InternetService', 'Contract', 'PaymentMethod'] ,axis=1, inplace=True)
+df_encoded= pd.concat([df_churn, df_encoded], axis=1)
+
+# Show Encoded Dataframe
+df_encoded
+```
+
+*Set Feature and Target
+
+```
+# Select Features
+feature = df_encoded.drop(['customerID', 'TotalCharges', 'Churn'], axis=1)
+feature
 ```
 
 ```
+# Select Target
+target = df_encoded['Churn']
+target
+```
 
+*Set Training and Testing Data*
 
+```
+# Set Training and Testing Data (70:30)
+from sklearn.model_selection import train_test_split, cross_val_score
+X_train, X_test, y_train, y_test  = train_test_split(feature , target, shuffle = True, test_size=0.3, random_state=1)
+
+# Show the Training and Testing Data
+print(X_train.shape)
+print(X_test.shape)
+print(y_train.shape)
+print(y_test.shape)
 ```
 
 ```
+X_test
+```
+
+## Decision Tree
+
+A decision tree is a flowchart-like tree structure where an internal node represents feature(or attribute), the branch represents a decision rule, and each leaf node represents the outcome. The topmost node in a decision tree is known as the root node. It learns to partition on the basis of the attribute value. It partitions the tree in recursively manner call recursive partitioning. This flowchart-like structure helps you in decision making.
+
+*Modeling Decision Tree*
+
+```
+# Import Module
+from sklearn import tree
+
+# Modeling Decision Tree
+dtc = tree.DecisionTreeClassifier(min_impurity_decrease=0.01)
+dtc.fit(X_train, y_train)
+
+# Predict to Test Data
+y_pred_dtc = dtc.predict(X_test)
+```
+
 
 
 ```
+# Visualize Tree
 
+from six import StringIO
+from IPython.display import Image
+from sklearn.tree import export_graphviz
+import pydotplus
+
+dot_data = StringIO()
+export_graphviz(dtc, out_file=dot_data,
+                filled=True, rounded=True,
+                special_characters=True,
+                class_names=['notchurn', 'churn'],
+                feature_names=['SeniorCitizen',	'Partner',	'Dependents', 'tenure',	'PhoneService', 'OnlineSecurity',	'OnlineBackup',	'DeviceProtection',
+                               'TechSupport',	'StreamingTV',	'StreamingMovies',	'PaperlessBilling',	'MonthlyCharges', 'gender_Female',
+                               'gender_Male',	'InternetService_DSL', 'InternetService_Fiber optic', 'InternetService_No',	'Contract_Month-to-month',
+                               'Contract_One year',	'Contract_Two year',	'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)',
+                               'PaymentMethod_Electronic check',	'PaymentMethod_Mailed check'])
+graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
+Image(graph.create_png())
 ```
 
+*Model Evaluation*
+```
+# Import Module
+from sklearn import metrics
 
+# Show the Confussion Matrix
+cm_dtc = metrics.confusion_matrix(y_test, y_pred_dtc)
+cm_dtc
 ```
 
 ```
+# Show the Accuracy, Precision, Recall
+acc_dtc = metrics.accuracy_score(y_test, y_pred_dtc)
+prec_dtc = metrics.precision_score(y_test, y_pred_dtc)
+rec_dtc = metrics.recall_score(y_test, y_pred_dtc)
+f1_dtc = metrics.f1_score(y_test, y_pred_dtc)
+kappa_dtc = metrics.cohen_kappa_score(y_test, y_pred_dtc)
 
-
+print("Accuracy:", acc_dtc)
+print("Precision:", prec_dtc)
+print("Recall:", rec_dtc)
+print("F1 Score:", f1_dtc)
+print("Cohens Kappa Score:", kappa_dtc)
 ```
 
 ```
+# Import Visualization Package
+import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings('ignore')
+
+# Set Size and Style
+plt.rcParams['figure.figsize'] = (10, 10)
+plt.style.use('ggplot')
+
+# Visualize ROC Curve
+y_pred_dtc_proba = dtc.predict_proba(X_test)[::,1]
+fprdtc, tprdtc, _ = metrics.roc_curve(y_test,  y_pred_dtc_proba)
+aucdtc = metrics.roc_auc_score(y_test, y_pred_dtc_proba)
+plt.plot(fprdtc,tprdtc,label="Decision Tree, auc="+str(aucdtc))
+plt.title('ROC Curve - Decision Tree')
+plt.xlabel('false positive rate')
+plt.ylabel('true positive rate')
+plt.legend(loc=4)
+plt.show()
+```
+
