@@ -41,6 +41,7 @@ Kelebihan lain dari metode ini adalah mampu mengeliminasi perhitungan atau data-
 
 Root node (akar): tujuan akhir atau keputusan besar yang ingin diambil.
 Branches (ranting): berbagai pilihan tindakan.
+
 Leaf node (daun): kemungkinan hasil atas setiap tindakan.
 Entropi adalah nilai informasi yang menyatakan ukuran ketidakpastian (impurity) dari atribut dari suatu kumpulan objek data dalam satuan bit.
 
