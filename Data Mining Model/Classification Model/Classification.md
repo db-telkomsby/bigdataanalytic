@@ -8,6 +8,14 @@
 3. Mahasiswa dapat mengimplementasikan Decision Tree
 4. Mahasiswa dapat mengimplementasikan model Klasifikasi menggunakan Python 
 
+## Table of Contents
+1. [Dasar Teori](#dasar-teori)
+2. [Classification](#classification)
+3. [Import Libraries](#import-libraries)
+4. [Import Raw Dataset](#import-raw-dataset)
+5. (Data Preprocessing)[#data-preprocessing]
+6. (Decision Tree)[#decision-tree]
+   
 # Dasar Teori :
 
 Klasifikasi secara singkat sebuah proses menemukan definisi kesamaan karakteristik dalam suatu kelompok atau kelas (class).
@@ -135,7 +143,7 @@ df_encoded= pd.concat([df_churn, df_encoded], axis=1)
 df_encoded
 ```
 
-*Set Feature and Target
+*Set Feature and Target*
 
 ```
 # Select Features
