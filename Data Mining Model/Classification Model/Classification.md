@@ -13,10 +13,11 @@
 2. [Classification](#classification)
 3. [Import Libraries](#import-libraries)
 4. [Import Raw Dataset](#import-raw-dataset)
-5. (Data Preprocessing)[#data-preprocessing]
-6. (Decision Tree)[#decision-tree]
+5. [Data Preprocessing](#data-preprocessing)
+6. [Decision Tree](#decision-tree)
+
    
-# Dasar Teori :
+## Dasar Teori :
 
 Klasifikasi secara singkat sebuah proses menemukan definisi kesamaan karakteristik dalam suatu kelompok atau kelas (class).
 Kelas, merupakan variabel tak bebas yang merupakan label dari hasil klasifikasi. Sebagai contoh adalah kelas loyalitas pelanggan, kelas badai atau gempa bumi, dan lain-lain.
@@ -271,4 +272,3 @@ plt.ylabel('true positive rate')
 plt.legend(loc=4)
 plt.show()
 ```
-
