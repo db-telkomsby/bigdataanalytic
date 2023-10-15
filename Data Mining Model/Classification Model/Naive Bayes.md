@@ -3,9 +3,9 @@
 
 # Tujuan : 
 
-1. Mahasiswa dapat menyimpulkan 
-2. Mahasiswa dapat menyimpulkan 
-3. Mahasiswa dapat mengimplementasikan 
+1. Mahasiswa dapat menyimpulkan konsep Klasifikasi
+2. Mahasiswa dapat menyimpulkan konsep Naive Bayes
+3. Mahasiswa dapat mengimplementasikan Naive Bayes
 4. Mahasiswa dapat mengimplementasikan model Klasifikasi menggunakan Python 
 
 ## Table of Contents
