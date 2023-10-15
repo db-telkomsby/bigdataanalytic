@@ -155,8 +155,14 @@ We will predict customer behavior to retain customers. You can analyze all relev
 ## Import Libraries
 
 ```
-# Import Library
+# Import Library & Module
 import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+import matplotlib.pyplot as plt
+import warnings
+from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn import metrics
 ```
 
 ## Import Raw Dataset
@@ -203,9 +209,6 @@ df_churn.isnull().sum()
 *Encode Categorical Data*
 
 ```
-# Import Module
-from sklearn.preprocessing import OneHotEncoder
-
 # Encoder
 encoder = OneHotEncoder(sparse=False)
 
@@ -239,7 +242,6 @@ target
 
 ```
 # Set Training and Testing Data (70:30)
-from sklearn.model_selection import train_test_split, cross_val_score
 X_train, X_test, y_train, y_test  = train_test_split(feature , target, shuffle = True, test_size=0.3, random_state=1)
 
 # Show the Training and Testing Data
@@ -259,25 +261,46 @@ X_test
 *Modeling Naive Bayes*
 
 ```
+# Modeling Naive Bayes Classifier
+gnb = GaussianNB()
+gnb.fit(X_train, y_train)
 
-```
-
-
-
-```
-# Visualize Tree
-
-
-
-
+# Predict to Test Data
+y_pred_gnb= gnb.predict(X_test)
 ```
 
 *Model Evaluation*
 ```
+cm_gnb = metrics.confusion_matrix(y_test, y_pred_gnb)
+cm_gnb
 ```
 
 ```
+# Show the Accuracy, Precision, Recall
+acc_gnb = metrics.accuracy_score(y_test, y_pred_gnb)
+prec_gnb = metrics.precision_score(y_test, y_pred_gnb)
+rec_gnb = metrics.recall_score(y_test, y_pred_gnb)
+f1_gnb = metrics.f1_score(y_test, y_pred_gnb)
+kappa_gnb = metrics.cohen_kappa_score(y_test, y_pred_gnb)
+
+print("Accuracy:", acc_gnb)
+print("Precision:", prec_gnb)
+print("Recall:", rec_gnb)
+print("F1 Score:", f1_gnb)
+print("Cohens Kappa Score:", kappa_gnb)
 ```
 
 ```
+# ROC Curve
+warnings.filterwarnings('ignore')
+
+y_pred_gnb_proba = gnb.predict_proba(X_test)[::,1]
+fprgnb, tprgnb, _ = metrics.roc_curve(y_test,  y_pred_gnb_proba)
+aucgnb = metrics.roc_auc_score(y_test, y_pred_gnb_proba)
+plt.plot(fprgnb,tprgnb,label="Naive Bayes, auc="+str(aucgnb))
+plt.title('ROC Curve - Naive Bayes')
+plt.xlabel('false positive rate')
+plt.ylabel('true positive rate')
+plt.legend(loc=4)
+plt.show()
 ```
