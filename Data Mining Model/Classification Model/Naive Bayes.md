@@ -1,4 +1,4 @@
-# Modul 3
+# Modul 4
 # Klasifikasi (Naive Bayes)
 
 # Tujuan : 
