@@ -77,15 +77,15 @@ Jadi, dengan asumsi bahwa peluang Aris ngobrol sama wanita adalah 50% (berdasark
 
 
 **Contoh Penerapan:**
-Pengklasifikasi kualitas kadar air kolam ikan
-Fitur: pH, TDS, suhu air, dsb.
-Kelas: kolam layak atau tidak layak
-Pengklasifikasi opini positif atau negatif terhadap suatu produk
-Fitur: kamus kata yang termasuk positif dan negatif
-Kelas: opini positif atau negatif
-Pengklasifikasi kepribadian (personality) terhadap karakter seseorang
-Fitur: kamus kata yang termasuk sanguinis, plegmatis, melankolis, koleris
-Kelas: sanguinis, plegmatis, melankolis, koleris 
+1. Pengklasifikasi kualitas kadar air kolam ikan
+2. Fitur: pH, TDS, suhu air, dsb.
+3. Kelas: kolam layak atau tidak layak
+4. Pengklasifikasi opini positif atau negatif terhadap suatu produk
+5. Fitur: kamus kata yang termasuk positif dan negatif
+6. Kelas: opini positif atau negatif
+7. Pengklasifikasi kepribadian (personality) terhadap karakter seseorang
+8. Fitur: kamus kata yang termasuk sanguinis, plegmatis, melankolis, koleris
+9. Kelas: sanguinis, plegmatis, melankolis, koleris 
 
 Contoh Soal:
 1.   Diketahui data orang-orang yang membeli laptop dan tidak sebagai berikut ini:
