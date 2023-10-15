@@ -1,11 +1,11 @@
 # Modul 3
-# Klasifikasi (Decision Tree)
+# Klasifikasi (Naive Bayes)
 
 # Tujuan : 
 
-1. Mahasiswa dapat menyimpulkan konsep Klasifikasi
-2. Mahasiswa dapat menyimpulkan konsep Decision Tree
-3. Mahasiswa dapat mengimplementasikan Decision Tree
+1. Mahasiswa dapat menyimpulkan 
+2. Mahasiswa dapat menyimpulkan 
+3. Mahasiswa dapat mengimplementasikan 
 4. Mahasiswa dapat mengimplementasikan model Klasifikasi menggunakan Python 
 
 ## Table of Contents
@@ -19,39 +19,9 @@
    
 ## Dasar Teori :
 
-Klasifikasi secara singkat sebuah proses menemukan definisi kesamaan karakteristik dalam suatu kelompok atau kelas (class).
-Kelas, merupakan variabel tak bebas yang merupakan label dari hasil klasifikasi. Sebagai contoh adalah kelas loyalitas pelanggan, kelas badai atau gempa bumi, dan lain-lain.
-Prediktor, merupakan variabel bebas suatu model berdasarkan dari karakteristik atribut data yang diklasifikasi, misalnya merokok, minum-minuman alkohol, tekanan darah, status perkawinan, dan sebagainya.
 
-Set data pelatihan, merupakan sekumpulan data lengkap yang berisi kelas dan prediktor untuk dilatih agar model dapat mengelompokan ke dalam kelas yang tepat. Contohnya adalah grup pasien pelanggan di suatu supermarket dan sebagainya
-Set data uji, berisi data-data baru yang akan dikelompokan oleh model guna mengetahui akurasi dari model yang telah dibuat.
 
-Algoritma klasifikasi yang sudah umum  digunakan antara lain :
 
-    * Decision tree.
-    * Naives Bayes
-    * Support Vector Machine
-    * k-Nearest Neighbor
-
-Decision Tree merupakan salah satu cara data processing dalam memprediksi masa depan dengan cara membangun klasifikasi atau regresi model dalam bentuk struktur pohon. Hal tersebut dilakukan dengan cara memecah terus ke dalam himpunan bagian yang lebih kecil lalu pada saat itu juga sebuah pohon keputusan secara bertahap dikembangkan. Hasil akhir dari proses tersebut adalah pohon dengan node keputusan dan node daun. Sebuah node keputusan (misalnya, Cuaca/ Outlook) memiliki dua atau lebih cabang (misalnya, Panas, Berawan dan Hujan).
-
-Decision Tree juga berguna untuk dieksplorasi data, menemukan hubungan antara sejumlah calon variabel input dengan sebuah variabel target. Pohon keputusan eksplorasi data dan pemodelan yang salah langkah pertama yang sangat baik dalam proses pemodelan yang digunakan sebagai model akhir untuk beberapa teknik lainnya.
-Kelebihan lain dari metode ini adalah mampu mengeliminasi perhitungan atau data-data yang tidak diperlukan. Karena sampel yang ada biasanya hanya diuji berdasarkan kriteria atau kelas tertentu. Meski memiliki banyak kelebihan, namun bukan berarti ini tidak memiliki kekurangan. Pohon keputusan ini mungkin tumpang tindih, terutama jika kelas dan kriteria yang digunakan sangat sering dapat meningkatkan waktu pengambilan keputusan sesuai dengan kapasitas memori yang diperlukan.
-
-![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar%201.png?raw=true)
-
-Root node (akar): tujuan akhir atau keputusan besar yang ingin diambil.
-
-Branches (ranting): berbagai pilihan tindakan.
-
-Leaf node (daun): kemungkinan hasil atas setiap tindakan.
-Entropi adalah nilai informasi yang menyatakan ukuran ketidakpastian (impurity) dari atribut dari suatu kumpulan objek data dalam satuan bit.
-
-![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar%202.png?raw=true)
-
-Information Gain adalah ukuran efektivitas suatu atribut dalam mengklasifikasikan data.
-
-![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar%203.png?raw=true)
 
 ## Classification
 
@@ -184,22 +154,13 @@ print(y_test.shape)
 X_test
 ```
 
-## Decision Tree
+## Naive Bayes
 
-A decision tree is a flowchart-like tree structure where an internal node represents feature(or attribute), the branch represents a decision rule, and each leaf node represents the outcome. The topmost node in a decision tree is known as the root node. It learns to partition on the basis of the attribute value. It partitions the tree in recursively manner call recursive partitioning. This flowchart-like structure helps you in decision making.
 
-*Modeling Decision Tree*
+*Modeling Naive Bayes*
 
 ```
-# Import Module
-from sklearn import tree
 
-# Modeling Decision Tree
-dtc = tree.DecisionTreeClassifier(min_impurity_decrease=0.01)
-dtc.fit(X_train, y_train)
-
-# Predict to Test Data
-y_pred_dtc = dtc.predict(X_test)
 ```
 
 
@@ -207,68 +168,17 @@ y_pred_dtc = dtc.predict(X_test)
 ```
 # Visualize Tree
 
-from six import StringIO
-from IPython.display import Image
-from sklearn.tree import export_graphviz
-import pydotplus
 
-dot_data = StringIO()
-export_graphviz(dtc, out_file=dot_data,
-                filled=True, rounded=True,
-                special_characters=True,
-                class_names=['notchurn', 'churn'],
-                feature_names=['SeniorCitizen',	'Partner',	'Dependents', 'tenure',	'PhoneService', 'OnlineSecurity',	'OnlineBackup',	'DeviceProtection',
-                               'TechSupport',	'StreamingTV',	'StreamingMovies',	'PaperlessBilling',	'MonthlyCharges', 'gender_Female',
-                               'gender_Male',	'InternetService_DSL', 'InternetService_Fiber optic', 'InternetService_No',	'Contract_Month-to-month',
-                               'Contract_One year',	'Contract_Two year',	'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)',
-                               'PaymentMethod_Electronic check',	'PaymentMethod_Mailed check'])
-graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
-Image(graph.create_png())
+
+
 ```
 
 *Model Evaluation*
 ```
-# Import Module
-from sklearn import metrics
-
-# Show the Confussion Matrix
-cm_dtc = metrics.confusion_matrix(y_test, y_pred_dtc)
-cm_dtc
 ```
 
 ```
-# Show the Accuracy, Precision, Recall
-acc_dtc = metrics.accuracy_score(y_test, y_pred_dtc)
-prec_dtc = metrics.precision_score(y_test, y_pred_dtc)
-rec_dtc = metrics.recall_score(y_test, y_pred_dtc)
-f1_dtc = metrics.f1_score(y_test, y_pred_dtc)
-kappa_dtc = metrics.cohen_kappa_score(y_test, y_pred_dtc)
-
-print("Accuracy:", acc_dtc)
-print("Precision:", prec_dtc)
-print("Recall:", rec_dtc)
-print("F1 Score:", f1_dtc)
-print("Cohens Kappa Score:", kappa_dtc)
 ```
 
 ```
-# Import Visualization Package
-import matplotlib.pyplot as plt
-import warnings
-warnings.filterwarnings('ignore')
-
-# Set Size and Style
-plt.rcParams['figure.figsize'] = (10, 10)
-plt.style.use('ggplot')
-
-# Visualize ROC Curve
-y_pred_dtc_proba = dtc.predict_proba(X_test)[::,1]
-fprdtc, tprdtc, _ = metrics.roc_curve(y_test,  y_pred_dtc_proba)
-aucdtc = metrics.roc_auc_score(y_test, y_pred_dtc_proba)
-plt.plot(fprdtc,tprdtc,label="Decision Tree, auc="+str(aucdtc))
-plt.title('ROC Curve - Decision Tree')
-plt.xlabel('false positive rate')
-plt.ylabel('true positive rate')
-plt.legend(loc=4)
-plt.show()
 ```
