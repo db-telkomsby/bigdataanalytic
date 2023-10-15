@@ -20,14 +20,17 @@
 ## Dasar Teori :
 **Klasifikasi** secara singkat sebuah proses menemukan definisi kesamaan karakteristik dalam suatu kelompok atau kelas (class).
 Kelas, merupakan variabel tak bebas yang merupakan label dari hasil klasifikasi. Sebagai contoh adalah kelas loyalitas pelanggan, kelas badai atau gempa bumi, dan lain-lain.
+
 **Prediktor**, merupakan variabel bebas suatu model berdasarkan dari karakteristik atribut data yang diklasifikasi, misalnya merokok, minum-minuman alkohol, tekanan darah, status perkawinan, dan sebagainya.
+
 **Set data pelatihan**, merupakan sekumpulan data lengkap yang berisi kelas dan prediktor untuk dilatih agar model dapat mengelompokan ke dalam kelas yang tepat. Contohnya adalah grup pasien pelanggan di suatu supermarket dan sebagainya
+
 **Set data uji**, berisi data-data baru yang akan dikelompokan oleh model guna mengetahui akurasi dari model yang telah dibuat.
 Algoritma klasifikasi yang sudah umum  digunakan antara lain :
-Decision tree.
-Naives Bayes
-Support Vector Machine
-k-Nearest Neighbor
+* Decision tree
+* **Naives Bayes**
+* Support Vector Machine
+* k-Nearest Neighbor
 
 
 **Probability-based learning** merupakan pembelajaran menggunakan teori probabilitas atau suatu kemungkinan yang akan terjadi untuk membuat prediksi atau keputusan. Cara ini digunakan untuk memodelkan ketidakpastian data.
