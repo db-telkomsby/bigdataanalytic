@@ -34,6 +34,8 @@ k-Nearest Neighbor
 
 **Teorema Bayes**, teorema ini menyatakan seberapa jauh derajat kepercayaan subjektif seseorang harus berubah secara rasional ketika ada petunjuk atau informasi baru.
 Rumus Teorema Bayes
+![alt text]() 
+
 Contoh sederhana 
 Aris yang ngobrol sama orang di cafe. Anggaplah kita adalah Kinan yang lagi bikin asumsi-asumsi tentang sosok yang ngobrol sama Aris. Berapa sih kemungkinan Aris ngobrol sama wanita? Gitu kan ya.
 
@@ -52,26 +54,26 @@ P(BP|W) = 75% = 0,75
 P(BP|P) = 30% = 0,3
 
 Nah, sekarang kita mencari tahu, berapakah kemungkinan wanita berbaju pink?
-
+![alt text]() 
 
 
 Dari aturan Bayes di atas, kita bisa substitusi kategorinya sesuai dengan yang akan kita cari.
-
+![alt text]() 
 
 Bingung nggak gimana cara mencari P(BP), karena di asumsi belum diketahui besaran peluangnya? nggak usah bingung, masih ingat tentang materi probabilitas total nggak? Nah, bisa mencarinya menggunakan rumus probabilitas total.
 
 P(BP) = P(BP|W).P(W) + P(BP|P).P(P) = (0,75)(0,5) + (0,3)(0,5) = 0,525
 
 Kita masukkan ke dalam formula aturan Bayes, sehingga:
-
+![alt text]() 
 
 Jadi, dengan asumsi bahwa peluang Aris ngobrol sama wanita adalah 50% (berdasarkan setengah populasi). Tapi, dengan adanya informasi tambahan berupa baju pink, maka keyakinan Kinan bisa bertambah menjadi 71,4%.
-
-
 
 **Naïve Bayes** adalah metode pengklasifikasian paling sederhana dari model pengklasifikasian yang ada dengan menggunakan konsep peluang, dimana diasumsikan bahwa setiap atribut contoh (data sampel) bersifat saling lepas satu sama lain berdasarkan atribut kelas.
 
 **Flowchart Naives Bayes:**
+![alt text]() 
+
 
 **Contoh Penerapan:**
 Pengklasifikasi kualitas kadar air kolam ikan
@@ -86,7 +88,7 @@ Kelas: sanguinis, plegmatis, melankolis, koleris
 
 Contoh Soal:
 1.   Diketahui data orang-orang yang membeli laptop dan tidak sebagai berikut ini:
-
+![alt text]() 
 
 Kemudian jika ada data lagi yang masuk dengan kriteria: usia <= 30 dan memiliki income “medium”, maka akan diklasifikasikan dengan label apa?
 
@@ -95,18 +97,19 @@ Maka perlu menghitung P(X) dengan X = “usia <=30” dan income ==”medium”
 2.   Hitung probabilitas masing-masing kelas. 
 C1 → Kelas 1 untuk beli_komputer=”yes” 
 C2 → Kelas 1 untuk beli_komputer=”no”
-
+![alt text]() 
 
 3.   Perhitungan P(X|Ci) → Probabilitas karakteristik terhadap suatu label
 X 1→ age <=30
-
+![alt text]() 
 X2→ income==’medium’ 
+![alt text]()
 
-4.   Menghitung PX terhadap masing-masing kelas.
+5.   Menghitung PX terhadap masing-masing kelas.
 𝑃(𝑋|𝐶1) = 𝑃(𝑋𝑛𝐶1) = 0.22 ∗ 0.44 = 0.09 
 𝑃(𝑋|𝐶2) = 𝑃(𝑋𝑛𝐶2) = 0.60 ∗ 0.40 = 0.24
 
-5.   Perhitungan akhir untuk menentukan data X akan dikelompokan ke kelas yang mana:
+6.   Perhitungan akhir untuk menentukan data X akan dikelompokan ke kelas yang mana:
 𝑃1 = 𝑃(𝑋|𝐶1 )𝑃(𝐶1 ) = 0.09 ∗ 0.64 = 0.063 
 𝑃2 = 𝑃(𝑋|𝐶2 )𝑃(𝐶2 ) = 0.24 ∗ 0.36 = 0.085 
 Karena P2 > P1, maka data x masuk ke dalam Kelas dengan label beli_komputer = “no” 
