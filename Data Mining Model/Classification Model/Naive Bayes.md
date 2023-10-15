@@ -34,7 +34,7 @@ k-Nearest Neighbor
 
 **Teorema Bayes**, teorema ini menyatakan seberapa jauh derajat kepercayaan subjektif seseorang harus berubah secara rasional ketika ada petunjuk atau informasi baru.
 Rumus Teorema Bayes
-![alt text]() 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/Rumus%20Teorema%20Bayes.png?raw=true) 
 
 Contoh sederhana 
 Aris yang ngobrol sama orang di cafe. Anggaplah kita adalah Kinan yang lagi bikin asumsi-asumsi tentang sosok yang ngobrol sama Aris. Berapa sih kemungkinan Aris ngobrol sama wanita? Gitu kan ya.
@@ -44,35 +44,33 @@ Nah, kita pakai teorema Bayes untuk menentukan berapa peluang Aris ngobrol sama 
 Kita tulis asumsi bahwa besar peluang Aris ngobrol sama wanita dari informasi pertama adalah 50%. Angka ini hanya asumsi bahwa populasi wanita di bumi adalah setengah dari populasi.
 
 P(W) = 50% = 0,5
-
 P(P) = 50% = 0,5
 
 Setelah Aris bilang kalau orang yang ngobrol bareng sama dia memakai baju pink, maka kita punya informasi tambahan nih. Peluang orang berbaju pink adalah wanita itu kan besar ya, katakanlah 75%. Sedangkan, peluang pria memakai baju berwarna pink tentu lebih kecil, karena mayoritas pria nggak suka pakai warna pink, katakanlah jumlahnya 30%.
 
 P(BP|W) = 75% = 0,75
-
 P(BP|P) = 30% = 0,3
 
 Nah, sekarang kita mencari tahu, berapakah kemungkinan wanita berbaju pink?
-![alt text]() 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/P(AB).png?raw=true) 
 
 
 Dari aturan Bayes di atas, kita bisa substitusi kategorinya sesuai dengan yang akan kita cari.
-![alt text]() 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/P(WBP).png?raw=true) 
 
 Bingung nggak gimana cara mencari P(BP), karena di asumsi belum diketahui besaran peluangnya? nggak usah bingung, masih ingat tentang materi probabilitas total nggak? Nah, bisa mencarinya menggunakan rumus probabilitas total.
 
 P(BP) = P(BP|W).P(W) + P(BP|P).P(P) = (0,75)(0,5) + (0,3)(0,5) = 0,525
 
 Kita masukkan ke dalam formula aturan Bayes, sehingga:
-![alt text]() 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/P(WBP)%202.png?raw=true) 
 
 Jadi, dengan asumsi bahwa peluang Aris ngobrol sama wanita adalah 50% (berdasarkan setengah populasi). Tapi, dengan adanya informasi tambahan berupa baju pink, maka keyakinan Kinan bisa bertambah menjadi 71,4%.
 
 **Naïve Bayes** adalah metode pengklasifikasian paling sederhana dari model pengklasifikasian yang ada dengan menggunakan konsep peluang, dimana diasumsikan bahwa setiap atribut contoh (data sampel) bersifat saling lepas satu sama lain berdasarkan atribut kelas.
 
 **Flowchart Naives Bayes:**
-![alt text]() 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/Flowchart.png?raw=true) 
 
 
 **Contoh Penerapan:**
@@ -88,7 +86,7 @@ Kelas: sanguinis, plegmatis, melankolis, koleris
 
 Contoh Soal:
 1.   Diketahui data orang-orang yang membeli laptop dan tidak sebagai berikut ini:
-![alt text]() 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/tabel.png?raw=true) 
 
 Kemudian jika ada data lagi yang masuk dengan kriteria: usia <= 30 dan memiliki income “medium”, maka akan diklasifikasikan dengan label apa?
 
@@ -97,13 +95,13 @@ Maka perlu menghitung P(X) dengan X = “usia <=30” dan income ==”medium”
 2.   Hitung probabilitas masing-masing kelas. 
 C1 → Kelas 1 untuk beli_komputer=”yes” 
 C2 → Kelas 1 untuk beli_komputer=”no”
-![alt text]() 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar1-PCi.png?raw=true) 
 
 3.   Perhitungan P(X|Ci) → Probabilitas karakteristik terhadap suatu label
 X 1→ age <=30
-![alt text]() 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar2_X1.png?raw=true) 
 X2→ income==’medium’ 
-![alt text]()
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar3_x2.png?raw=true)
 
 5.   Menghitung PX terhadap masing-masing kelas.
 𝑃(𝑋|𝐶1) = 𝑃(𝑋𝑛𝐶1) = 0.22 ∗ 0.44 = 0.09 
