@@ -95,9 +95,12 @@ Kemudian jika ada data lagi yang masuk dengan kriteria: usia <= 30 dan memiliki 
 
 Maka perlu menghitung P(X) dengan X = “usia <=30” dan income ==”medium”
 
-2.   Hitung probabilitas masing-masing kelas. 
-C1 → Kelas 1 untuk beli_komputer=”yes” 
+2.   Hitung probabilitas masing-masing kelas.
+
+C1 → Kelas 1 untuk beli_komputer=”yes”
+
 C2 → Kelas 1 untuk beli_komputer=”no”
+
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar1-PCi.png?raw=true) 
 
 3.   Perhitungan P(X|Ci) → Probabilitas karakteristik terhadap suatu label
@@ -106,13 +109,16 @@ X 1→ age <=30
 X2→ income==’medium’ 
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar3_x2.png?raw=true)
 
-5.   Menghitung PX terhadap masing-masing kelas.
+4.   Menghitung PX terhadap masing-masing kelas.
 𝑃(𝑋|𝐶1) = 𝑃(𝑋𝑛𝐶1) = 0.22 ∗ 0.44 = 0.09 
 𝑃(𝑋|𝐶2) = 𝑃(𝑋𝑛𝐶2) = 0.60 ∗ 0.40 = 0.24
 
-6.   Perhitungan akhir untuk menentukan data X akan dikelompokan ke kelas yang mana:
-𝑃1 = 𝑃(𝑋|𝐶1 )𝑃(𝐶1 ) = 0.09 ∗ 0.64 = 0.063 
-𝑃2 = 𝑃(𝑋|𝐶2 )𝑃(𝐶2 ) = 0.24 ∗ 0.36 = 0.085 
+5.   Perhitungan akhir untuk menentukan data X akan dikelompokan ke kelas yang mana:
+
+𝑃1 = 𝑃(𝑋|𝐶1 )𝑃(𝐶1 ) = 0.09 ∗ 0.64 = 0.063
+
+𝑃2 = 𝑃(𝑋|𝐶2 )𝑃(𝐶2 ) = 0.24 ∗ 0.36 = 0.085
+
 Karena P2 > P1, maka data x masuk ke dalam Kelas dengan label beli_komputer = “no” 
 
 
