@@ -169,7 +169,7 @@ from sklearn import metrics
 
 ```
 # Import Data to Google Colab
-df_churn = pd.read_csv('https://raw.githubusercontent.com/dianrdn/data/master/customer_churn.csv', sep = ';')
+df_churn = pd.read_csv('https://raw.githubusercontent.com/db-telkomsby/bigdataanalytic/main/Data%20Mining%20Model/Classification%20Model/customer_churn.csv', sep = ';')
 df_churn
 
 # Show 10 first Row
