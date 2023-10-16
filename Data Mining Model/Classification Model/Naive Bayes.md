@@ -47,11 +47,13 @@ Nah, kita pakai teorema Bayes untuk menentukan berapa peluang Aris ngobrol sama 
 Kita tulis asumsi bahwa besar peluang Aris ngobrol sama wanita dari informasi pertama adalah 50%. Angka ini hanya asumsi bahwa populasi wanita di bumi adalah setengah dari populasi.
 
 P(W) = 50% = 0,5
+
 P(P) = 50% = 0,5
 
 Setelah Aris bilang kalau orang yang ngobrol bareng sama dia memakai baju pink, maka kita punya informasi tambahan nih. Peluang orang berbaju pink adalah wanita itu kan besar ya, katakanlah 75%. Sedangkan, peluang pria memakai baju berwarna pink tentu lebih kecil, karena mayoritas pria nggak suka pakai warna pink, katakanlah jumlahnya 30%.
 
 P(BP|W) = 75% = 0,75
+
 P(BP|P) = 30% = 0,3
 
 Nah, sekarang kita mencari tahu, berapakah kemungkinan wanita berbaju pink?
