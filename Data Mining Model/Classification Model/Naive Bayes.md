@@ -110,7 +110,9 @@ X2→ income==’medium’
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar3_x2.png?raw=true)
 
 4.   Menghitung PX terhadap masing-masing kelas.
+
 𝑃(𝑋|𝐶1) = 𝑃(𝑋𝑛𝐶1) = 0.22 ∗ 0.44 = 0.09 
+
 𝑃(𝑋|𝐶2) = 𝑃(𝑋𝑛𝐶2) = 0.60 ∗ 0.40 = 0.24
 
 5.   Perhitungan akhir untuk menentukan data X akan dikelompokan ke kelas yang mana:
