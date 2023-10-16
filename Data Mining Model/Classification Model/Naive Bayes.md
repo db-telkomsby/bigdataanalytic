@@ -125,7 +125,6 @@ X2→ income==’medium’
 
 Karena P2 > P1, maka data x masuk ke dalam Kelas dengan label beli_komputer = “no” 
 
-
 ## Classification
 
 Here we model the classification model from telco customer churn data (https://www.kaggle.com/blastchar/telco-customer-churn). This data is consist of customer profile, customer subscription history, and their churn information.
