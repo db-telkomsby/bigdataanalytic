@@ -14,7 +14,7 @@
 3. [Import Libraries](#import-libraries)
 4. [Import Raw Dataset](#import-raw-dataset)
 5. [Data Preprocessing](#data-preprocessing)
-6. [Decision Tree](#decision-tree)
+6. [Naive Bayes](#naive-bayes)
 
    
 ## Dasar Teori :
