@@ -106,6 +106,7 @@ C2 → Kelas 1 untuk beli_komputer=”no”
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar1-PCi.png?raw=true) 
 
 3.   Perhitungan P(X|Ci) → Probabilitas karakteristik terhadap suatu label
+   
 X 1→ age <=30
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/gambar2_X1.png?raw=true) 
 X2→ income==’medium’ 
