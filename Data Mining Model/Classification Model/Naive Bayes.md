@@ -93,7 +93,7 @@ Contoh Soal:
 1.   Diketahui data orang-orang yang membeli laptop dan tidak sebagai berikut ini:
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Classification%20Model/images/tabel.png?raw=true) 
 
-Kemudian jika ada data lagi yang masuk dengan kriteria: usia <= 30 dan memiliki income “medium”, maka akan diklasifikasikan dengan label apa?
+Kemudian jika ada data lagi yang masuk dengan kriteria: **usia <= 30 dan memiliki income “medium”**, maka akan diklasifikasikan dengan label apa?
 
 Maka perlu menghitung P(X) dengan X = “usia <=30” dan income ==”medium”
 
