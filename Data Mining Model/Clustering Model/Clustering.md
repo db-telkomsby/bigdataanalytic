@@ -34,27 +34,25 @@ Contoh Soal:
 
 Diketahui data nilai mahasiswa sebagai berikut:
 
--------------------------------------------------------------
-
-  	NO     NAMA MAHASISWA        UTS        TUGAS        UAS
-----	----------------      -----      -------      -----
-  1	     Roy		89	    90		75
-  2	     Sintia		90	    71		95
-  3          Iqbal		70	    75		80
-  4	     Dilan		45	    65		59
-  5	     Ratna		65	    75		53
-  6	     Merry		80	    70		75
-  7	     Rudi		90	    85		81
-  8	     Hafiz		70	    70		73
-  9	     Gede		96	    93		85
-  10	     Christian 		60	    55		48
-  11	     Justin		45	    60		58
-  12	     Jesika		60	    70		72
-  13	     Ayu		85	    90		88
-  14	     Siska		52	    68		55
-  15	     Reitama		40	    60		70
-  
--------------------------------------------------------------
+----------------------------------------------------------------------
+      NO     NAMA MAHASISWA       UTS        TUGAS        UAS
+     ----   ----------------      -----      -------      -----
+      1	     Roy		89	    90		75
+      2	     Sintia		90	    71		95
+      3	     Iqbal		70	    75		80
+      4	     Dilan		45	    65		59
+      5	     Ratna		65	    75		53
+      6	     Merry		80	    70		75
+      7	     Rudi		90	    85		81
+      8	     Hafiz		70	    70		73
+      9	     Gede		96	    93		85
+      10      Christian 	60	    55		48
+      11      Justin		45	    60		58
+      12      Jesika		60	    70		72
+      13      Ayu		85	    90		88
+      14      Siska		52	    68		55
+      15      Reitama		40	    60		70
+----------------------------------------------------------------------
 
 Tentukan ada berapa cluster (k) yang akan diajukan?
 Diambil 3 cluster -> pintar, sedang dan kurang
