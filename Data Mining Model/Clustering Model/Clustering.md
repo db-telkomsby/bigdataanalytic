@@ -58,137 +58,30 @@ Tentukan ada berapa cluster (k) yang akan diajukan?
 Diambil 3 cluster -> pintar, sedang dan kurang
 Tentukan centroid (nilai tengah) dari masing-masing cluster. Random (Boleh diambil dari salah satu data atau menghitung rata-rata).
 
-Cluster
-UTS
-TUGAS
-UAS
-Cluster 1
-96
-98
-83
-Cluster 2
-70
-75
-80
-Cluster 3
-60
-55
-48
-
+----------------------------------------------------------------------
+	Cluster 	UTS 	TUGAS 	UAS
+ 	--------	----	-----	---
+	Cluster 1	96	98	83
+	Cluster 2	70	75	80
+	Cluster 3	60	55	48
+----------------------------------------------------------------------
 
 Hitung Euclidean distance (jarak Euclidean) antara data dengan masing-masing cluster. Data akan masuk ke cluster dengan nilai terendah.
 Contoh: perhitungan pada data 1 (Roy).
+
 Jarak ke cluster 1:
 d(1,1)= 89-962 + 90-982+ 75-832=12,57
+
 Jarak ke cluster 2:
 d(1,2)= 89-702 + 90-752+ 75-802=24,72
+
 Jarak ke cluster 3:
 d(1,3)= 89-602 + 90-552+ 75-482=52,87
+
 Karena jarak terkecil data 1 (Roy) adalah terhadap cluster 1 (12,57), maka data 1 akan dimasukan ke dalam cluster 1.
 Ulangi perhitungan sampai data ke-15, maka akan didapati hasil berikut ini:
 
-
-
-	
-No
-Nama Mahasiswa
-Jarak Ke Cluster
-Hasil
-Cluster 1
-Cluster 2
-Cluster 3
-1.
-Roy
-12,57
-24,72
-52,87
-1
-2.
-Sintia
-24,90
-25,32
-58,01
-1
-3.
-Iqbal
-32,02
-0,00
-39,04
-2
-4.
-Dilan
-63,73
-34,15
-21,12
-3
-5.
-Ratna
-48,05
-27,46
-21,21
-3
-6.
-Merry
-29,75
-12,25
-36,80
-2
-7.
-Rudi
-10,77
-22,38
-53,75
-1
-8.
-Hafiz
-36,73
-8,60
-30,82
-2
-9.
-Gede
-0,00
-32,02
-64,10
-1
-10.
-Christian
-64,10
-39,04
-0,00
-3
-11.
-Justin
-66,48
-36,52
-18,71
-3
-12.
-Jesika
-44,65
-13,75
-28,30
-2
-13.
-Ayu
-11,79
-22,67
-58,74
-1
-14.
-Siska
-58,83
-31,59
-16,79
-3
-15.
-Reitama
-66,71
-35,00
-30,15
-3
-
-
+tabel
 
 
 
@@ -211,145 +104,18 @@ Reitama
 Hitung ulang centroid dengan menghitung rata-rata data dari satu cluster.
 Contohnya, didapat data-data yang masuk ke cluster 1:
 
-Nama Mahasiswa
-UTS
-TUGAS
-UAS
-Roy
-89
-90
-75
-Sintia
-90
-71
-95
-Rudi
-90
-85
-81
-Gede
-96
-93
-85
-Ayu
-85
-90
-88
-Average:
-90 🡪 91.25
-85,8 🡪 84,75
-84,8 🡪 84
-
-
 Maka dari perhitungan ini didapat centroid cluster 1 berubah dari (96,98,83) menjadi (90, 85.8, 84.8)
 
-Centroid cluster 2 yang baru: (70, 71.25, 75)
-Centroid cluster 3 yang baru: (51.16, 63.83, 57.16)
+- Centroid cluster 2 yang baru: (70, 71.25, 75)
+- Centroid cluster 3 yang baru: (51.16, 63.83, 57.16)
 
 Apabila nilai centroid masih berubah atau ada data yang berpindah cluster, ulangi ke langkah 4.
 
 Karena di langkah 4 masih terjadi perubahan centroid, maka dilakukan perhitungan iterasi ke-2 yang mengulang langkah ke-4, menghitung masing-masing data terhadap centroidnya. Pada perhitungan kedua, didapatkan hasil sebagaimana berikut ini:
 
-No
-Nama Mahasiswa
-Jarak Ke Cluster
-Hasil
-C1
-C2
-C3
-1.
-Roy
-10,71
-26,69
-49,34
-1
-2.
-Sintia
-17,97
-28,29
-54,69
-1
-3.
-Iqbal
-23,23
-6,25
-31,63
-2
-4.
-Dilan
-55,89
-30,33
-6,54
-3
-5.
-Ratna
-41,87
-22,87
-18,26
-3
-6.
-Merry
-21,11
-10,08
-34,46
-2
-7.
-Rudi
-3,88
-25,00
-50,24
-1
-8.
-Hafiz
-28,09
-2,36
-25,37
-2
-9.
-Gede
-9,37
-35,34
-60,29
-1
-10.
-Christian
-56,59
-33,06
-15,49
-3
-11.
-Justin
-58,39
-32,26
-7,31
-3
-12.
-Jesika
-36,24
-10,51
-18,33
-2
-13.
-Ayu
-7,27
-27,30
-52,73
-1
-14.
-Siska
-51,47
-27,10
-4,77
-3
-15.
-Reitama
-58,18
-32,43
-17,44
-3
 
 
 Karena masing-masing data tetap berada di cluster yang sama dengan tahapan perhitungan pertama, maka iterasi dihentikan. Umumnya, iterasi dihentikan pada saat:
-Tidak ada data yang berpindah cluster, atau
-Nilai centroid tidak berubah, atau
-Telah berada di maksimum iterasi 🡪 biasanya digunakan untuk data yang besar. 
+- Tidak ada data yang berpindah cluster, atau
+- Nilai centroid tidak berubah, atau
+- Telah berada di maksimum iterasi 🡪 biasanya digunakan untuk data yang besar. 
