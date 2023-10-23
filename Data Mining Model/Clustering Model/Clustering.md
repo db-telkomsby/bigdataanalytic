@@ -35,7 +35,7 @@ Contoh Soal:
 Diketahui data nilai mahasiswa sebagai berikut:
 
 ----------------------------------------------------------------------
-      NO     NAMA MAHASISWA       UTS        TUGAS        UAS
+      NO     NAMA MAHASISWA        UTS        TUGAS        UAS
      ----   ----------------      -----      -------      -----
       1	     Roy		89	    90		75
       2	     Sintia		90	    71		95
@@ -46,12 +46,12 @@ Diketahui data nilai mahasiswa sebagai berikut:
       7	     Rudi		90	    85		81
       8	     Hafiz		70	    70		73
       9	     Gede		96	    93		85
-      10      Christian 	60	    55		48
-      11      Justin		45	    60		58
-      12      Jesika		60	    70		72
-      13      Ayu		85	    90		88
-      14      Siska		52	    68		55
-      15      Reitama		40	    60		70
+     10        Christian 		60	    55		48
+     11        Justin		45	    60		58
+     12        Jesika		60	    70		72
+     13        Ayu			85	    90		88
+     14        Siska		52	    68		55
+     15        Reitama		40	    60		70
 ----------------------------------------------------------------------
 
 Tentukan ada berapa cluster (k) yang akan diajukan?
