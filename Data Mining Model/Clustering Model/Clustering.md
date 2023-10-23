@@ -30,9 +30,9 @@ Nilai pusat cluster yang baru dapat dihitung dengan cara mencari nilai rata-rata
 - Hitung pusat cluster. 
 - Ulangi langkah 2 - 4 hingga sudah tidak ada lagi data yang berpindah ke cluster yang lain.
 
-Contoh Soal:
+## Contoh Soal:
 
-Diketahui data nilai mahasiswa sebagai berikut:
+*1. Diketahui data nilai mahasiswa sebagai berikut:*
 
 ----------------------------------------------------------------------
       NO     NAMA MAHASISWA        UTS        TUGAS        UAS
@@ -54,9 +54,12 @@ Diketahui data nilai mahasiswa sebagai berikut:
      15        Reitama		40	    60		70
 ----------------------------------------------------------------------
 
-Tentukan ada berapa cluster (k) yang akan diajukan?
+*2. Tentukan ada berapa cluster (k) yang akan diajukan?*
+
 Diambil 3 cluster -> pintar, sedang dan kurang
-Tentukan centroid (nilai tengah) dari masing-masing cluster. Random (Boleh diambil dari salah satu data atau menghitung rata-rata).
+
+*3. Tentukan centroid (nilai tengah) dari masing-masing cluster.*
+Random (Boleh diambil dari salah satu data atau menghitung rata-rata).
 
 ----------------------------------------------------------------------
 	Cluster 	UTS 	TUGAS 	UAS
@@ -66,16 +69,17 @@ Tentukan centroid (nilai tengah) dari masing-masing cluster. Random (Boleh diamb
 	Cluster 3	60	55	48
 ----------------------------------------------------------------------
 
-Hitung Euclidean distance (jarak Euclidean) antara data dengan masing-masing cluster. Data akan masuk ke cluster dengan nilai terendah.
+*4. Hitung Euclidean distance (jarak Euclidean) antara data dengan masing-masing cluster.*
+Data akan masuk ke cluster dengan nilai terendah.
 Contoh: perhitungan pada data 1 (Roy).
 
-Jarak ke cluster 1:
+- Jarak ke cluster 1:
 d(1,1)= 89-962 + 90-982+ 75-832=12,57
 
-Jarak ke cluster 2:
+- Jarak ke cluster 2:
 d(1,2)= 89-702 + 90-752+ 75-802=24,72
 
-Jarak ke cluster 3:
+- Jarak ke cluster 3:
 d(1,3)= 89-602 + 90-552+ 75-482=52,87
 
 Karena jarak terkecil data 1 (Roy) adalah terhadap cluster 1 (12,57), maka data 1 akan dimasukan ke dalam cluster 1.
@@ -83,25 +87,7 @@ Ulangi perhitungan sampai data ke-15, maka akan didapati hasil berikut ini:
 
 tabel
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hitung ulang centroid dengan menghitung rata-rata data dari satu cluster.
+*5. Hitung ulang centroid dengan menghitung rata-rata data dari satu cluster.*
 Contohnya, didapat data-data yang masuk ke cluster 1:
 
 Maka dari perhitungan ini didapat centroid cluster 1 berubah dari (96,98,83) menjadi (90, 85.8, 84.8)
@@ -109,11 +95,9 @@ Maka dari perhitungan ini didapat centroid cluster 1 berubah dari (96,98,83) men
 - Centroid cluster 2 yang baru: (70, 71.25, 75)
 - Centroid cluster 3 yang baru: (51.16, 63.83, 57.16)
 
-Apabila nilai centroid masih berubah atau ada data yang berpindah cluster, ulangi ke langkah 4.
+*6. Apabila nilai centroid masih berubah atau ada data yang berpindah cluster, ulangi ke langkah 4.*
 
 Karena di langkah 4 masih terjadi perubahan centroid, maka dilakukan perhitungan iterasi ke-2 yang mengulang langkah ke-4, menghitung masing-masing data terhadap centroidnya. Pada perhitungan kedua, didapatkan hasil sebagaimana berikut ini:
-
-
 
 Karena masing-masing data tetap berada di cluster yang sama dengan tahapan perhitungan pertama, maka iterasi dihentikan. Umumnya, iterasi dihentikan pada saat:
 - Tidak ada data yang berpindah cluster, atau
