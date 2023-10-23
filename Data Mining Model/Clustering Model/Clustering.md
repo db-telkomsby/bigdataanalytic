@@ -18,9 +18,13 @@ Algoritma k-means merupakan algoritma yang membutuhkan parameter input sebanyak 
 
 Untuk melakukan penghitungan jarak data ke-i (Xi) pada pusat cluster ke-k (Ck), diberi nama (dik), dapat digunakan formula Euclidean, yaitu:
 
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Clustering%20Model/images/gambar1.png?raw=true) 
+
 Suatu data akan menjadi anggota dari cluster ke-J apabila jarak data tersebut ke pusat cluster ke-J bernilai paling kecil jika dibandingkan dengan jarak ke pusat cluster lainnya. 
 Selanjutnya, kelompokkan data-data yang menjadi anggota pada setiap cluster.
 Nilai pusat cluster yang baru dapat dihitung dengan cara mencari nilai rata-rata dari data yang menjadi anggota pada cluster tersebut, dengan rumus:
+
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Clustering%20Model/images/gambar2.png?raw=true) 
 
 ## Algoritma K-Means 
  
@@ -74,21 +78,26 @@ Data akan masuk ke cluster dengan nilai terendah.
 Contoh: perhitungan pada data 1 (Roy).
 
 - Jarak ke cluster 1:
-d(1,1)= 89-962 + 90-982+ 75-832=12,57
+
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Clustering%20Model/images/cluster1.png?raw=true) 
 
 - Jarak ke cluster 2:
-d(1,2)= 89-702 + 90-752+ 75-802=24,72
+
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Clustering%20Model/images/cluster2.png?raw=true) 
 
 - Jarak ke cluster 3:
-d(1,3)= 89-602 + 90-552+ 75-482=52,87
+
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Clustering%20Model/images/cluster3.png?raw=true) 
 
 Karena jarak terkecil data 1 (Roy) adalah terhadap cluster 1 (12,57), maka data 1 akan dimasukan ke dalam cluster 1.
 Ulangi perhitungan sampai data ke-15, maka akan didapati hasil berikut ini:
 
-tabel
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Clustering%20Model/images/tabel-iterasi1.png?raw=true) 
 
 *5. Hitung ulang centroid dengan menghitung rata-rata data dari satu cluster.*
 Contohnya, didapat data-data yang masuk ke cluster 1:
+
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Clustering%20Model/images/tabel-cluster1.png?raw=true) 
 
 Maka dari perhitungan ini didapat centroid cluster 1 berubah dari (96,98,83) menjadi (90, 85.8, 84.8)
 
@@ -98,6 +107,8 @@ Maka dari perhitungan ini didapat centroid cluster 1 berubah dari (96,98,83) men
 *6. Apabila nilai centroid masih berubah atau ada data yang berpindah cluster, ulangi ke langkah 4.*
 
 Karena di langkah 4 masih terjadi perubahan centroid, maka dilakukan perhitungan iterasi ke-2 yang mengulang langkah ke-4, menghitung masing-masing data terhadap centroidnya. Pada perhitungan kedua, didapatkan hasil sebagaimana berikut ini:
+
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Clustering%20Model/images/tabel%20hasil.png?raw=true) 
 
 Karena masing-masing data tetap berada di cluster yang sama dengan tahapan perhitungan pertama, maka iterasi dihentikan. Umumnya, iterasi dihentikan pada saat:
 - Tidak ada data yang berpindah cluster, atau
