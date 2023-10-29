@@ -10,11 +10,12 @@ Mahasiswa dapat mengimplementasikan model K-Means menggunakan Python
 ## Table of Contents
 1. [Dasar Teori](#dasar-teori)
 2. [Algoritma K-Means](#algoritma-k-means)
-3. [Clustering](#clustering)
-4. [Import Libraries](#import-libraries)
-5. [Import Raw Dataset](#import-raw-dataset)
-6. [Data Preprocessing](#data-preprocessing)
-7. [Naive Bayes](#naive-bayes)
+3. [Contoh Soal](#contoh-soal)
+4. [Clustering](#clustering)
+5. [Import Libraries](#import-libraries)
+6. [Import Raw Dataset](#import-raw-dataset)
+7. [Data Preprocessing](#data-preprocessing)
+8. [Naive Bayes](#naive-bayes)
 
 
 ## Dasar Teori
@@ -44,7 +45,7 @@ Nilai pusat cluster yang baru dapat dihitung dengan cara mencari nilai rata-rata
 - Hitung pusat cluster. 
 - Ulangi langkah 2 - 4 hingga sudah tidak ada lagi data yang berpindah ke cluster yang lain.
 
-## Contoh Soal:
+## Contoh Soal
 
 *1. Diketahui data nilai mahasiswa sebagai berikut:*
 
@@ -141,3 +142,105 @@ from matplotlib import pyplot as plt
 #%matplotlib inline
 ```
 
+## Import Raw Dataset
+```
+path = 'https://raw.githubusercontent.com/db-telkomsby/bigdataanalytic/main/Data%20Mining%20Model/Clustering%20Model/clustering.csv'
+df = pd.read_csv(path, sep = ",")
+df.head
+```
+
+## Determining SSE and SME
+```
+k_rng = range(1,10)
+sse = []
+for k in k_rng:
+  km=KMeans(n_clusters=k)
+  km.fit(df[['INCOME','SPEND']])
+  sse.append(km.inertia_)
+```
+
+```
+sse
+```
+
+```
+plt.xlabel('k')
+plt.ylabel('Sum of squared error')
+plt.plot(k_rng,sse)
+```
+
+```
+plt.scatter(df['INCOME'],df['SPEND'])
+plt.xlabel('INCOME')
+plt.ylabel('SPEND')
+```
+
+```
+km = KMeans(n_clusters=3, random_state=42)
+km
+```
+
+```
+y_predicted = km.fit_predict(df[['INCOME','SPEND']])
+y_predicted
+```
+
+```
+df['cluster'] = y_predicted
+df.head()
+```
+
+```
+df1 = df[df.cluster==0]
+df2 = df[df.cluster==1]
+df3 = df[df.cluster==2]
+plt.scatter(df1.INCOME,df1['SPEND'], color='green')
+plt.scatter(df2.INCOME,df2['SPEND'], color='yellow')
+plt.scatter(df3.INCOME,df3['SPEND'], color='red')
+plt.xlabel('INCOME')
+plt.ylabel('SPEND')
+plt.legend
+```
+
+```
+scaler = MinMaxScaler()
+
+scaler.fit(df[['INCOME']])
+df['INCOME'] = scaler.transform(df[['INCOME']])
+
+scaler.fit(df[['SPEND']])
+df['SPEND'] = scaler.transform(df[['SPEND']])
+df.head
+```
+
+```
+km=KMeans(n_clusters=3, random_state=42)
+y_predicted=km.fit_predict(df[['INCOME','SPEND']])
+y_predicted
+```
+
+```
+df['cluster']=y_predicted
+df
+```
+
+```
+km.cluster_centers_
+```
+
+```
+df1 = df[df.cluster==0]
+df2 = df[df.cluster==1]
+df3 = df[df.cluster==2]
+plt.scatter(df1.INCOME,df1['SPEND'], color='green')
+plt.scatter(df2.INCOME,df2['SPEND'], color='yellow')
+plt.scatter(df3.INCOME,df3['SPEND'], color='red')
+plt.scatter(km.cluster_centers_[:,0],km.cluster_centers_[:,1],color='black',marker='*',label='centroid')
+plt.xlabel('INCOME')
+plt.ylabel('SPEND')
+plt.legend
+```
+
+```
+df
+```
