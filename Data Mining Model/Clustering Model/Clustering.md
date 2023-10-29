@@ -14,8 +14,8 @@ Mahasiswa dapat mengimplementasikan model K-Means menggunakan Python
 4. [Clustering](#clustering)
 5. [Import Libraries](#import-libraries)
 6. [Import Raw Dataset](#import-raw-dataset)
-7. [Data Preprocessing](#data-preprocessing)
-8. [Naive Bayes](#naive-bayes)
+7. [Determining SSE and K](#determining-sse-and-k)
+8. [Clustering Model and Visualization](#clustering-model-and-visualization)
 
 
 ## Dasar Teori
@@ -149,7 +149,7 @@ df = pd.read_csv(path, sep = ",")
 df.head
 ```
 
-## Determining SSE and SME
+## Determining SSE and K
 ```
 k_rng = range(1,10)
 sse = []
@@ -179,6 +179,9 @@ plt.ylabel('SPEND')
 km = KMeans(n_clusters=3, random_state=42)
 km
 ```
+
+
+## Clustering Model and Visualization
 
 ```
 y_predicted = km.fit_predict(df[['INCOME','SPEND']])
