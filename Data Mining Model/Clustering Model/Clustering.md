@@ -7,7 +7,17 @@ Mahasiswa dapat menyimpulkan konsep K-Means
 Mahasiswa dapat mengimplementasikan K-Means
 Mahasiswa dapat mengimplementasikan model K-Means menggunakan Python 
 
-## Dasar Teori :
+## Table of Contents
+1. [Dasar Teori](#dasar-teori)
+2. [Algoritma K-Means](#algoritma-k-means)
+3. [Clustering](#clustering)
+4. [Import Libraries](#import-libraries)
+5. [Import Raw Dataset](#import-raw-dataset)
+6. [Data Preprocessing](#data-preprocessing)
+7. [Naive Bayes](#naive-bayes)
+
+
+## Dasar Teori
 K-Means merupakan algoritma yang umum digunakan untuk clustering dokumen. Prinsip utama K-Means adalah menyusun k prototype atau pusat massa (centroid) dari sekumpulan data berdimensi. Sebelum diterapkan proses algoritma K-means, dokumen akan di preprocessing terlebih dahulu. Kemudian dokumen direpresentasikan sebagai vektor yang memiliki term dengan nilai tertentu. 
 Algoritma k-means merupakan algoritma yang membutuhkan parameter input sebanyak k dan membagi sekumpulan n objek kedalam k cluster sehingga tingkat kemiripan antar anggota dalam satu cluster tinggi sedangkan tingkat kemiripan dengan anggota pada cluster lain sangat rendah. Kemiripan anggota terhadap cluster diukur dengan kedekatan objek terhadap nilai mean pada cluster atau dapat disebut sebagai centroid cluster.
 - Konsep dasar dari K-Means adalah pencarian pusat cluster secara iteratif. 
@@ -114,3 +124,20 @@ Karena masing-masing data tetap berada di cluster yang sama dengan tahapan perhi
 - Tidak ada data yang berpindah cluster, atau
 - Nilai centroid tidak berubah, atau
 - Telah berada di maksimum iterasi 🡪 biasanya digunakan untuk data yang besar. 
+
+# Clustering
+
+Analisis klaster atau pengelompokan adalah tugas mengelompokkan sekumpulan objek sedemikian rupa sehingga objek-objek dalam kelompok yang sama (disebut klaster) lebih mirip (dalam beberapa hal) satu sama lain dibandingkan dengan objek-objek dalam kelompok (cluster) lainnya.
+
+Di sini kami memodelkan pengelompokan dari data pendapatan dan pengeluaran pelanggan. Kami menggunakan model ini untuk melakukan segmentasi pelanggan. Kami membedakan pelanggan ke dalam jumlah kelompok yang optimal berdasarkan pendapatan dan pengeluaran mereka.
+
+## Import Libraries
+
+```
+from sklearn.cluster import KMeans
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+from matplotlib import pyplot as plt
+#%matplotlib inline
+```
+
