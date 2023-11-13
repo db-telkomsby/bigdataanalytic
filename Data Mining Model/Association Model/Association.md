@@ -62,6 +62,48 @@ Dua proses penting Algoritma Apriori:
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Flowchart%20Algoritma%20Apriori.png?raw=true)  
 
 ## Contoh Soal
+Diketahui basis data transaksi peminjaman buku di suatu perpustakaan, dengan iketahui minimum support = 18% sebagai berikut:
+![alt text]()  
+
+Inisiasi
+
+![alt text]()  
+
+Diketahui minimum support = 18%
+
+Iterasi ke-1
+
+![alt text]()  
+
+![alt text]()  
+
+
+Iterasi ke-2
+
+![alt text]()  
+
+![alt text]()  
+
+Iterasi ke-3
+
+![alt text]()  
+
+![alt text]() 
+
+Aturan asosiatif
+
+
+Jika meminjam buku x, maka direkomendasikan buku y.
+
+Misalkan: Jika meminjam buku statistics dan linear algebra, maka seberapa direkomendasikan buku intro to data mining?
+
+x dan y = statistics, linear algebra, dan intro to data mining = 18.42%
+
+statistics dan linear algebra	= 34.21% 
+          
+Confidence = 53.84%
+
+Maka tingkat rekomendasi buku intro to data mining adalah 53.84%.
 
 
 ## Import Library
