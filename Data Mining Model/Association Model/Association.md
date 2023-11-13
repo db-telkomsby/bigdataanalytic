@@ -63,35 +63,32 @@ Dua proses penting Algoritma Apriori:
 
 ## Contoh Soal
 Diketahui basis data transaksi peminjaman buku di suatu perpustakaan, dengan iketahui minimum support = 18% sebagai berikut:
-![alt text]()  
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/tabel1.png?raw=true)  
 
 Inisiasi
 
-![alt text]()  
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/tabel2.png?raw=true)  
+
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/tabel3.png?raw=true) 
 
 Diketahui minimum support = 18%
 
 Iterasi ke-1
 
-![alt text]()  
-
-![alt text]()  
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/iterasi1.png?raw=true)  
 
 
 Iterasi ke-2
 
-![alt text]()  
-
-![alt text]()  
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/iterasi2.png?raw=true)  
 
 Iterasi ke-3
 
-![alt text]()  
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/iterasi3.png?raw=true)  
 
-![alt text]() 
 
 Aturan asosiatif
-
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Aturan%20asosiatif.png?raw=true) 
 
 Jika meminjam buku x, maka direkomendasikan buku y.
 
