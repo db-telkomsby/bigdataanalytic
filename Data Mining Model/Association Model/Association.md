@@ -32,25 +32,25 @@ Aturan asosiatif memiliki dua parameter/tolak ukur yaitu:
   
 Persamaan (1) adalah rumus untuk mendapatkan nilai support
 
-![alt text]()
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Support%20(A).png?raw=true)
 
 Persamaan (2) adalah rumus untuk mendapatkan nilai support dari suatu kombinasi item.
 
-![alt text]()
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Support%20(A,B).png?raw=true)
 
 - Confidence e (nilai kepastian) adalah kuat hubungan antara item dalam aturan asosiasi.
   
 Rumus untuk mendapatkan nilai confidence:
 
-![alt text]()
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Confidence%20(A,B).png?raw=true)
 
 Atau,
 
-![alt text]()
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Confidence(A=B).png?raw=true)
 
 Sedangkan rumus mendapatkan nilai persentase confidence adalah:
 
-![alt text]()
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Confidence(A=B)%20x%20100%25.png?raw=true)
 
 Dua proses penting Algoritma Apriori:
 -  Join (Penggabungan) : Pada proses ini satu item dikombinasikan dengan item lain sampai tidak ada lagi kombinasi yang bisa terbentuk.
@@ -59,6 +59,6 @@ Dua proses penting Algoritma Apriori:
 
 ## Flowchart Algoritma Apriori 
  
-![alt text]()  
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Flowchart%20Algoritma%20Apriori.png?raw=true)  
 
 ## Contoh Soal
