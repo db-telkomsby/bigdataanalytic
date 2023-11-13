@@ -2,7 +2,7 @@
 # Association Rule (Apriori)
 
 
-# Tujuan : 
+## Tujuan : 
 
 Mahasiswa dapat menyimpulkan konsep 
 Mahasiswa dapat mengimplementasikan 
@@ -17,13 +17,13 @@ Mahasiswa dapat mengimplementasikan model
 ## Dasar Teori
 Algoritma Apriori adalah algoritma pencarian pola pada teknik data mining untuk menemukan aturan asosiatif antara suatu kombinasi item-set yang memiliki nilai keseringan tertentu sesuai dengan kriteria atau filter yang diinginkan. 
 
-Algoritma Apriori dikembangkan oleh R. Agrawal dan R. Srikant tahun 1994. 
+- Algoritma Apriori dikembangkan oleh R. Agrawal dan R. Srikant tahun 1994. 
 
-Nama Algoritma Apriori diambil dari frequent itemset mining pada ilmu prior knowledge. 
+- Nama Algoritma Apriori diambil dari frequent itemset mining pada ilmu prior knowledge. 
 
-Algoritma Apriori termasuk pada jenis aturan asosiasi pada data mining.
+- Algoritma Apriori termasuk pada jenis aturan asosiasi pada data mining.
 
-Algoritma Apriori merupakan pendekatan iteratif dimana k-itemset digunakan untuk mengeksplorasi (k + 1)-itemset.
+- Algoritma Apriori merupakan pendekatan iteratif dimana k-itemset digunakan untuk mengeksplorasi (k + 1)-itemset.
 
 Pada penerapannya, Algoritma Apriori digunakan untuk mencari aturan-aturan yang memenuhi minimum support dan confidence. Untuk memperoleh ketentuan asosiatif dibutuhkan pencarian ketentuan yang mempunyai pola frekuensi besar (PFT). PFT dicari dengan cara mencari ketentuan yang penuhi nilai support minimum.
 
@@ -62,3 +62,71 @@ Dua proses penting Algoritma Apriori:
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/Flowchart%20Algoritma%20Apriori.png?raw=true)  
 
 ## Contoh Soal
+
+
+## Import Library
+```
+import pandas as pd
+import numpy as np
+import seaborn as sns
+from mlxtend.frequent_patterns import apriori
+from mlxtend.frequent_patterns import association_rules
+```
+
+## Import dataset
+```
+retail_df = pd.read_excel("https://github.com/rc-dbe/bigdatacertification/blob/master/dataset/Online%20Retail.xlsx?raw=true")
+retail_df.head()
+```
+
+```
+# Remove additional spaces
+retail_df['Description'] = retail_df['Description'].str.strip()
+
+# Remove NA values
+retail_df.dropna(axis=0, subset=['InvoiceNo'], inplace=True)
+
+# Remove cancelled orders
+retail_df['InvoiceNo'] = retail_df['InvoiceNo'].astype('str')
+retail_df = retail_df[~retail_df['InvoiceNo'].str.contains('C')]
+```
+
+```
+# Create Encode Function
+def encode_units(x):
+    if x <= 0:
+        return 0
+    if x >= 1:
+        return 1
+
+def create_basket(country_filter):
+    basket = (retail_df[retail_df['Country'] == country_filter]
+          .groupby(['InvoiceNo', 'Description'])['Quantity']
+          .sum().unstack().reset_index().fillna(0)
+          .set_index('InvoiceNo'))
+    return basket
+```
+
+```
+country_filter = "France"
+basket_french = create_basket("France")
+basket_sets = basket_french.applymap(encode_units)
+basket_sets.drop('POSTAGE', inplace=True, axis=1)
+```
+
+```
+frequent_itemsets = apriori(basket_sets, min_support=0.05, use_colnames=True)
+```
+
+```
+# Generate Rules
+rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.2)
+rules.head()
+```
+
+```
+# Sorting
+rules.sort_values(["confidence"], axis=0,
+                 ascending=False, inplace=True)
+rules
+```
