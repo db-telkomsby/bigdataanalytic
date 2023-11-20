@@ -73,6 +73,10 @@ Inisiasi
 
 Diketahui minimum support = 18%
 
+Menghitung support = 
+
+![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/menghitung%20support.PNG)
+
 Iterasi ke-1
 
 ![alt text](https://github.com/db-telkomsby/bigdataanalytic/blob/main/Data%20Mining%20Model/Association%20Model/images/iterasi1.png?raw=true)  
