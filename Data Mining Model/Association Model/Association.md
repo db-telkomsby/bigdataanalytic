@@ -100,7 +100,7 @@ Misalkan: Jika meminjam buku statistics dan linear algebra, maka seberapa direko
 
 x dan y = statistics, linear algebra, dan intro to data mining = 18.42%
 
-statistics dan linear algebra	= 34.21% 
+x       = statistics dan linear algebra	= 34.21% 
           
 Confidence = 53.84%
 
