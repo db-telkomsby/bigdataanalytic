@@ -98,6 +98,8 @@ Jika meminjam buku x, maka direkomendasikan buku y.
 
 Misalkan: Jika meminjam buku statistics dan linear algebra, maka seberapa direkomendasikan buku intro to data mining?
 
+maka, x= statistics dan linear algebra	, dan y= intro to data mining
+
 x dan y = statistics, linear algebra, dan intro to data mining = 18.42%
 
 x       = statistics dan linear algebra	= 34.21% 
